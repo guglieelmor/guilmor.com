@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^guilmor\.com$ [NC]
+RewriteRule ^(.*)$ guilmor.com/index.html
+Options -Indexes
