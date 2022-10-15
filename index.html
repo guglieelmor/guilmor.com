@@ -1,6 +1,6 @@
 <!-- 
 -----------------------------------------------------------------------------
-Version: 1.0.0.100
+Version: 2.0.0.100
 Author: Guilherme <GULLIVER> Oliveira
 Copyright, GUILMOR - Soluções em Software
 (https://www.guilmor.com/)
@@ -45,14 +45,15 @@ Copyright, GUILMOR - Soluções em Software
                 <div class="wb ec">
                     <a href="index.html" class="vb od qc kl kn p"><span class="xg aj cj bj gh">GUILMOR</span></a>
                     <a href="index.html" class="ac pd qc hl nn p"><span class="xg aj cj bj gh">C</span><span class="aj cj bj zg fh">S</span></a></div>
-                <div class="ac il ic ec el gn nd rl mc zg">
-                    <a href="index.html" class="vb mf qf mb aj cj bj hj hh s">Home </a>
-                    <a href="services.html" class="vb mf qf mb aj cj bj hj hh s">Produtos</a>
-                    <a href="about.html" class="vb mf qf mb aj cj bj hj hh s">Sobre</a>
-                    <a href="work.html" class="vb mf qf mb aj cj bj hj hh s">Tecnologia</a>
+                <div class="ac il ic ec el gn nd rl mc zg menus-app">
+                    <a href="index.html" class="vb mf qf mb aj cj bj hj hh s">Home</a>
+                    <a href="#parceiros" class="vb mf qf mb aj cj bj hj hh s">Parceiros</a>
+                    <a href="#sobre" class="vb nf sf mc mb aj cj bj zg hh s hj">Sobre</a>
+                    <a href="#comoFunciona" class="vb mf qf mb aj cj bj hj hh s">Como funciona?</a>
+                    <a href="#tecnologia" class="vb mf qf mb aj cj bj hj hh s">Tecnologia</a>
                 </div>
                 <div class="ac hl">
-                    <a class="wb hc ec of tf xh ld nc vd j mb aj bj dj eh hh ff t" href="contact.html">Bora conversar?</a>
+                    <a class="wb hc ec of tf xh ld nc vd j mb aj bj dj eh hh ff t" target="_blank" href="https://api.whatsapp.com/send?phone=5551999107210&text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20a%20Guilmor">Bora conversar?</a>
                 </div>
                 <div class="vb kl" x-data="{ open: false }">
                     <button class="hg gi nh sc aj fj bj xi yi ub p ff" :class="{ 'js-hamburger-open': open }" @click="open = !open">
@@ -62,20 +63,21 @@ Copyright, GUILMOR - Soluções em Software
                         <span class="vb gg ng pg ai rc mb ef aj cj bj xi yi k q"></span>
                     </button>
                     <div class="ac gg kg ng fi hc ec bi id v ab eb" :class="{ 'js-mobileNav-open': open }" @keydown.escape.window="open = false">
-                        <div class="wb bc jc ec jf xd i ai nd">
+                        <div class="wb bc jc ec jf xd i ai nd menus-app"> 
                             <a href="index.html" class="vb nf sf mc mb aj cj bj zg hh s hj">Home</a>
-                            <a href="services.html" class="vb nf sf mc mb aj cj bj zg hh s hj">Produtos</a>
-                            <a href="about.html" class="vb nf sf mc mb aj cj bj zg hh s hj">Sobre</a>
-                            <a href="work.html" class="vb nf sf mc mb aj cj bj zg hh s hj">Tecnologia</a>
-                            <a class="wb hc ec pf tf xh md nc vd j mb aj bj dj eh hh ff s" href="contact.html">Bora conversar?</a></div>
+                            <a href="#parceiros" class="vb mf qf mb aj cj bj hj hh s">Parceiros</a>
+                            <a href="#sobre" class="vb nf sf mc mb aj cj bj zg hh s hj">Sobre</a>
+                            <a href="#comoFunciona" class="vb nf sf mc mb aj cj bj zg hh s hj">Como funciona?</a>
+                            <a href="#tecnologia" class="vb nf sf mc mb aj cj bj zg hh s hj">Tecnologia</a>
+                            <a class="wb hc ec pf tf xh md nc vd j mb aj bj dj eh hh ff s" target="_blank" href="https://api.whatsapp.com/send?phone=5551999107210&text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20a%20Guilmor">Bora conversar?</a></div>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
     <main class="o">
-        <section class="qf yf cg xd bf om hk gp">
-            <div class="hg lb tg ek m">
+        <section class="qf yf cg xd bf om hk gp" id="home">
+            <div class="hg lb tg ek m" data-aos="zoom-out-right">
                 <svg class="gg rg jg hd ch zh di" preserveaspectratio="none" viewbox="0 0 100 100" fill="currentcolor">
                     <polygon points="0,0 100,0 0,100"></polygon>
                 </svg>
@@ -88,8 +90,8 @@ Copyright, GUILMOR - Soluções em Software
                             <p class="he nd zg">Consultoria, desenvolvimento e infraestrutura para produtos de impacto digital. Sistemas específicos ou feitos sob medida para você e o seu negócio!</p>
                         </div>
                         <div class="ei ke ij nj rn">
-                            <a class="wb hc ec pf tf xh zc ld nc vd j mb aj bj dj eh hh ff u" href="contact.html">Vamos começar?</a>
-                            <a class="wb hg hc ec tf ge yd xh zc ld mc vd xg wj tj p" href="services.html">
+                            <a class="wb hc ec pf tf xh zc ld nc vd j mb aj bj dj eh hh ff u" target="_blank" href="https://api.whatsapp.com/send?phone=5551999107210&text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20a%20Guilmor">Vamos começar?</a>
+                            <a class="wb hg hc ec tf ge yd xh zc ld mc vd xg wj tj p" href="#parceiros">
                                 <span class="vb gg kg ng ci ai hd w mb zi bj dj ab eb tm vm"></span>
                                 <span class="hg di">Leia mais</span>
                             </a>
@@ -117,28 +119,45 @@ Copyright, GUILMOR - Soluções em Software
             </div>
         </section>
 
+        <section class="qf bg ag xd af mm nm hk gp" id="parceiros">
+            <div class="xd ai ue wg yo fm">
+                <p class="xb hc ec nf sf kd mc kh xg w qb rb y cb" data-aos="flip-up">Nossos parceiros</p>
+                <h2 class="he pd pc xg pj vl" data-aos="flip-left">Confiável pelas melhores empresas do ramo</h2>
+                <p class="he nd zg" data-aos="flip-left">Quem já usam Soluções Guilmor.</p>
+            </div>
+            <div class="xd le ze ro">
+                <div class="zb si hi wm al">
+                    <a href="https://peimage.com.br/" target="_blank" class="hf">
+                        <div class="wb hc ec ai ed lb aj cj bj m t hh ah" data-aos="zoom-out-right">
+                           <img src="src/img/peimage.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <div class="hg ai bd ql xn">
             <svg class="gg ai hd dh" preserveaspectratio="none" viewbox="0 0 100 100" fill="currentcolor">
                 <polygon points="0,0 0,100 100,100"></polygon>
             </svg>
         </div>
 
-        <section class="uf qf hm n hk gp">
+        <section class="uf qf hm n hk gp" id="sobre">
             <div class="xd ue wg fm xp ap">
-                <p class="xb hc ec nf sf kd mc kh xg w qb rb y cb">O que nós fazemos</p>
+                <p class="xb hc ec nf sf kd mc kh xg w qb rb y cb" data-aos="flip-up">O que nós fazemos</p>
                 <div class="zb ii he ai oq">
                     <div class="rq">
-                        <h2 class="pd pc xg pj vl">Criamos softwares digitais que ajudam você a progredir</h2>
+                        <h2 class="pd pc xg pj vl" data-aos="flip-left">Criamos softwares digitais que ajudam você a progredir</h2>
                     </div>
                     <div class="qq">
-                        <p class="nd zg">Melhor custo beneficio do mercado.</p>
+                        <p class="nd zg" data-aos="flip-left">Melhor custo beneficio do mercado.</p>
                     </div>
                 </div>
             </div>
             <div class="zb li hc xd le ai lq eq so ap ar rn">
                 <div>
                     <div class="ai">
-                        <div class="xd te vo uq">
+                        <div class="xd te vo uq" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                             <div class="wb hg rf tf ai lb tg m ik">
                                 <div class="wg ij qk">
                                     <div class="ai sk">
@@ -167,7 +186,7 @@ Copyright, GUILMOR - Soluções em Software
                     </div>
                     <div class="je ai lo xq mr er nr">
                         <div class="xd te vo uq">
-                            <div class="wb rf tf ai lb tg m ik">
+                            <div class="wb rf tf ai lb tg m ik" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                                 <div class="wg ij qk">
                                     <div class="ai sk">
                                         <div class="wb hc ec xd sh yc w kb zg rj ab eb">
@@ -189,7 +208,7 @@ Copyright, GUILMOR - Soluções em Software
                     </div>
                     <div class="je ai lo xq mr">
                         <div class="xd te vo uq">
-                            <div class="wb rf tf ai lb tg m ik">
+                            <div class="wb rf tf ai lb tg m ik" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                                 <div class="wg ij qk">
                                     <div class="ai sk">
                                         <div class="wb hc ec xd sh yc w kb zg rj ab eb">
@@ -209,9 +228,9 @@ Copyright, GUILMOR - Soluções em Software
                 </div>
                 <div class="wb hc ec ye zo">
                     <div class="zb vi ri hi hd">
-                        <div class="wi lb tg"><img src="src/img/1.png" class="cf ai hd lb"></div>
-                        <div class="lb tg"><img src="src/img/2.png" class="cf ai hd lb"></div>
-                        <div class="lb tg"><img src="src/img/3.png" class="cf ai hd lb"></div>
+                        <div class="wi lb tg"><img src="src/img/1.png" class="cf ai hd lb" data-aos="fade-right"></div>
+                        <div class="lb tg"><img src="src/img/2.png" class="cf ai hd lb" data-aos="fade-left"></div>
+                        <div class="lb tg"><img src="src/img/3.png" class="cf ai hd lb" data-aos="fade-left"></div>
                     </div>
                 </div>
             </div>
@@ -224,14 +243,14 @@ Copyright, GUILMOR - Soluções em Software
         </div>
 
         <div class="zf cg x lm om bb db">
-            <section class="qf xd ai af hk gp">
+            <section class="qf xd ai af hk gp" id="comoFunciona">
                 <div class="xd ai ue wg yo fm">
-                    <p class="xb hc ec nf sf kd mc kh xg w qb rb y cb">Nosso processo</p>
-                    <h2 class="he pd pc xg pj vl">Faça parte de todo processo.</h2>
-                    <p class="he nd zg">Você faz parte de todo o processo desde o seu início até o seu final.</p>
+                    <p class="xb hc ec nf sf kd mc kh xg w qb rb y cb" data-aos="flip-up">Nosso processo</p>
+                    <h2 class="he pd pc xg pj vl" data-aos="flip-left">Faça parte de todo processo.</h2>
+                    <p class="he nd zg" data-aos="flip-left">Você faz parte de todo o processo desde o seu início até o seu final.</p>
                 </div>
                 <div class="zb ki xd le ue so mq xo">
-                    <div class="ai">
+                    <div class="ai" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                         <span class="wb hc ec xd w lb tg uh cd y cb">
                             <svg xmlns="http://www.w3.org/2000/svg" class="rh xc zg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -246,7 +265,7 @@ Copyright, GUILMOR - Soluções em Software
                         <h3 class="ge od nc wg xg">1. Escopo & Ideias</h3>
                         <p class="ae md wd wg zg">A nossa equipe entenderá o seu problema.</p>
                     </div>
-                    <div class="ai">
+                    <div class="ai" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                         <span class="wb hc ec xd w lb tg uh cd y cb">
                             <svg class="rh xc zg" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -264,7 +283,7 @@ Copyright, GUILMOR - Soluções em Software
                         <h3 class="ge od nc wg xg">2. Design & Desenvolvimento</h3>
                         <p class="ae md wd wg zg">Após aprovação da primeira versão trabalharemos para concluir o projeto.</p>
                     </div>
-                    <div class="ai">
+                    <div class="ai" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                         <span class="wb hc ec xd w lb tg uh cd y cb">
                             <svg xmlns="http://www.w3.org/2000/svg" class="rh xc zg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -280,18 +299,20 @@ Copyright, GUILMOR - Soluções em Software
             </section>
         </div>
 
-        <section class="qf bg ag mm nm n hk gp">
+        <section class="qf bg ag mm nm n hk gp" id="tecnologia">
             <div class="xd ai af">
                 <div class="xd ai ue wg yo fm">
-                    <p class="xb hc ec nf sf kd mc kh xg w qb rb y cb">O que eu preciso?</p>
-                    <h2 class="he pd pc xg pj vl">Veja as tecnologias que desenvolvemos para você.</h2>
+                    <p class="xb hc ec nf sf kd mc kh xg w qb rb y cb" data-aos="flip-up">O que eu preciso?</p>
+                    <h2 class="he pd pc xg pj vl" data-aos="flip-left">Veja as tecnologias que desenvolvemos para você.</h2>
                 </div>
                 <div class="le so">
                     <div class="hg xd te xo">
-                        <div class="hn nb tg hg ai rp dq gb fb fd zn" data-background-image="images/featured-work-image-01.jpg" style="background-image:url(src/img/ecommerce.jpg)">
-                            <p class="xb hc ec nf sf fe ie jd mc kh xg w qb rb xj nn ab eb">Ecommerce</p>
+                        <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                            <div class="hn nb tg hg ai rp dq gb fb fd zn" data-background-image="images/featured-work-image-01.jpg" style="background-image:url(src/img/ecommerce.jpg)">
+                                <p class="xb hc ec nf sf fe ie jd mc kh xg w qb rb xj nn ab eb">Ecommerce</p>
+                            </div>
                         </div>
-                        <div class="hn pb tg gd hg ai mg lg di vb kf fk cp m sp wp aq zn">
+                        <div class="hn pb tg gd hg ai mg lg di vb kf fk cp m sp wp aq zn" data-aos="fade-down-left">
                             <div class="hd ln pn tn">
                                 <div class="ac kn">
                                     <p class="xb hc ec nf sf jd mc kh xg w qb rb ab eb">Ecommerce</p>
@@ -311,10 +332,12 @@ Copyright, GUILMOR - Soluções em Software
                     </div>
                     <div class="rf lp"></div>
                     <div class="hg xd te xo">
-                        <div class="hn nb tg hg ai rp dq wo gb fb fd zn" data-background-image="images/featured-work-image-02.jpg" style="background-image:url(src/img/app.png)">
-                            <p class="xb hc ec nf sf fe ie jd mc kh xg w qb rb xj nn ab eb">App</p>
+                        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">    
+                            <div class="hn nb tg hg ai rp dq wo gb fb fd zn" data-background-image="images/featured-work-image-02.jpg" style="background-image:url(src/img/app.png)">
+                                <p class="xb hc ec nf sf fe ie jd mc kh xg w qb rb xj nn ab eb">App</p>
+                            </div>
                         </div>
-                        <div class="hn pb tg gd hg ai mg ng di vb kf fk cp m zn sp wp aq">
+                        <div class="hn pb tg gd hg ai mg ng di vb kf fk cp m zn sp wp aq" data-aos="fade-down-right">
                             <div class="hd ln pn tn">
                                 <div class="ac kn">
                                     <p class="xb hc ec nf sf jd mc kh xg w qb rb ab eb">App</p>
@@ -334,10 +357,12 @@ Copyright, GUILMOR - Soluções em Software
                     </div>
                     <div class="rf lp"></div>
                     <div class="hg xd te xo">
-                        <div class="hn nb tg hg ai rp dq gb fb fd zn" data-background-image="images/featured-work-image-03.jpg" style="background-image:url(src/img/site.jpg)">
-                            <p class="xb hc ec nf sf fe ie jd mc kh xg w qb rb xj nn ab eb">Site</p>
+                        <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                            <div class="hn nb tg hg ai rp dq gb fb fd zn" data-background-image="images/featured-work-image-03.jpg" style="background-image:url(src/img/site.jpg)">
+                                <p class="xb hc ec nf sf fe ie jd mc kh xg w qb rb xj nn ab eb">Site</p>
+                            </div>
                         </div>
-                        <div class="hn pb tg gd hg ai mg lg di vb kf fk cp m sp wp aq zn">
+                        <div class="hn pb tg gd hg ai mg lg di vb kf fk cp m sp wp aq zn" data-aos="fade-down-left">
                             <div class="hd ln pn tn">
                                 <div class="ac kn">
                                     <p class="xb hc ec nf sf jd mc kh xg w qb rb ab eb">Meu site</p>
@@ -357,18 +382,19 @@ Copyright, GUILMOR - Soluções em Software
                     </div>
                     <div class="rf lp"></div>
                     <div class="hg xd te xo">
-                        <div class="hn nb tg hg ai rp dq wo gb fb fd zn" data-background-image="images/featured-work-image-04.jpg" style="background-image:url(src/img/dashboard.png)">
-                            <p class="xb hc ec nf sf fe ie jd mc kh xg w qb rb xj nn ab eb">Sistema</p>
+                        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">    
+                            <div class="hn nb tg hg ai rp dq wo gb fb fd zn" data-background-image="images/featured-work-image-04.jpg" style="background-image:url(src/img/dashboard.png)">
+                                <p class="xb hc ec nf sf fe ie jd mc kh xg w qb rb xj nn ab eb">Sistema</p>
+                            </div>
                         </div>
-                        <div class="hn pb tg gd hg ai mg ng di vb kf fk cp m zn sp wp aq">
+                        <div class="hn pb tg gd hg ai mg ng di vb kf fk cp m zn sp wp aq" data-aos="fade-down-right">
                             <div class="hd ln pn tn">
                                 <div class="ac kn">
                                     <p class="xb hc ec nf sf jd mc kh xg w qb rb ab eb">Sistema</p>
                                 </div>
                                 <div class="wb cc ai">
                                     <h3 class="pd oc xg bo">Sistema</h3>
-                                    <p class="ae ld jo zg ao">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
-                                        a. Vivamus magna justo, lacinia eget sed, convallis at tellus.</p>
+                                    <p class="ae ld jo zg ao">Complexidade na automação dos seus processos do jeito que você precisa.</p>
                                 </div>
                                 <div class="je vq">
                                     <a class="xb hg hc ec tf xh yc ld mc vd xg pl p" href="case-study.html">
@@ -390,7 +416,7 @@ Copyright, GUILMOR - Soluções em Software
             </svg>
         </div>
     
-        <section class="vf qf xd af im hk gp">
+        <section class="vf qf xd af im hk gp" data-aos="zoom-in">
             <div class="hg xf lb m kp">
                 <svg class="gg kg rg jg hd ch zh di" preserveaspectratio="none" viewbox="0 0 100 100" fill="currentcolor">
                     <polygon points="0,0 100,0 0,100"></polygon>
@@ -401,7 +427,7 @@ Copyright, GUILMOR - Soluções em Software
                         <h5 class="qd pc jh xg qj">Vamos fazer algo grande juntos.</h5>
                     </div>
                     <div class="te wb hc ke zp ho sn">
-                        <a class="wb hc ec pf tf xh zc ld nc vd j mb aj bj dj eh hh ff u" href="contact.html">Vamos começar?</a>
+                        <a class="wb hc ec pf tf xh zc ld nc vd j mb aj bj dj eh hh ff u" target="_blank" href="https://api.whatsapp.com/send?phone=5551999107210&text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20a%20Guilmor">Vamos começar?</a>
                     </div>
                 </div>
             </div>
@@ -423,20 +449,28 @@ Copyright, GUILMOR - Soluções em Software
             </div>
             <div class="fo">
                 <h6 class="nd nc xg">Menu</h6>
-                <ul class="ae b md">
+                <ul class="ae b md menus-app">
                     <li class="mc zg hh"><a href="index.html">Home</a></li>
-                    <li class="mc zg hh"><a href="about.html">Produtos</a></li>
-                    <li class="mc zg hh"><a href="services.html">Sobre</a></li>
-                    <li class="mc zg hh"><a href="work.html">Tecnologia</a></li>
-                    <li class="mc zg hh"><a href="contact.html">Contact us</a></li>
+                    <li class="mc zg hh"><a href="#parceiros">Parceiros</a></li>
+                    <li class="mc zg hh"><a href="#sobre">Sobre</a></li>
+                    <li class="mc zg hh"><a href="#comoFunciona">Como funciona?</a></li>
+                    <li class="mc zg hh"><a href="#tecnologia">Tecnologia</a></li>
                 </ul>
             </div>
-            <!-- <div class="bl pq fo">
-                <h6 class="nd nc xg">Follow us on social media</h6>
-                <p class="ae md zg">Lorem ipsum dolor sit amet consect adipis elit.</p>
+            <div class="bl pq fo">
+                <h6 class="nd nc xg"></h6>
+                <p class="ae md zg"></p>
                 <div class="fe ai mo">
                     <div class="wb fc h">
-                        <a class="wb hc ec sh yc mb aj ej bj m ih r zg" href="#">
+                        <!-- <a class="wb hc ec sh yc mb aj ej bj m ih r zg" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="nh tc" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+                            </svg> 
+                        </a> -->
+                        <!-- <a class="wb hc ec sh yc mb aj ej bj m ih r zg" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" class="nh tc" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <rect x="4" y="4" width="16" height="16" rx="4"></rect>
@@ -460,10 +494,10 @@ Copyright, GUILMOR - Soluções em Software
                                 <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z">
                                 </path>
                             </svg>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </footer>
 </body>
@@ -475,5 +509,33 @@ Copyright, GUILMOR - Soluções em Software
             document.getElementById("upNot").classList.remove("top");
         }, 250);
     }
+
+    const links = document.querySelectorAll(".menus-app a");
+
+    const links2 = document.querySelectorAll(".menus-app a");
+
+    for (const link of links) {
+        link.addEventListener("click", clickHandler);
+    }
+
+    for (const link of links2) {
+        link.addEventListener("click", clickHandler);
+    }
+
+    function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop;
+
+        scroll({
+            top: offsetTop,
+            behavior: "smooth"
+        });
+    }
+</script>
+<link rel="stylesheet" href="src/css/aos.css" />
+<script src="src/js/aos.js"></script>
+<script>
+  AOS.init();
 </script>
 </html>
