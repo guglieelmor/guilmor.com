@@ -1,6 +1,6 @@
 <!-- 
 -----------------------------------------------------------------------------
-Version: 2.0.0.100
+Version: 2.1.0.100
 Author: Guilherme <GULLIVER> Oliveira
 Copyright, GUILMOR - Soluções em Software
 (https://www.guilmor.com/)
@@ -23,6 +23,7 @@ Copyright, GUILMOR - Soluções em Software
             <meta name="apple-mobile-web-app-title" content="Crator Studio">
             <link rel="stylesheet" href="src/css/style.css">
             <script src="src/js/script.js"></script>
+            <link rel="stylesheet" type="text/css" href="src/css/cookieconsent.min.css" />
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTG4QCEVZL"></script>
             <script>
             window.dataLayer = window.dataLayer || [];
@@ -45,7 +46,7 @@ Copyright, GUILMOR - Soluções em Software
                             <a href="index.html" class="ac pd qc hl nn p"><span class="xg aj cj bj gh">C</span><span class="aj cj bj zg fh">S</span></a></div>
                         <div class="ac il ic ec el gn nd rl mc zg menus-app">
                             <a href="#home" class="vb mf qf mb aj cj bj hj hh s">Home</a>
-                            <a href="#parceiros" class="vb mf qf mb aj cj bj hj hh s">Parceiros</a>
+                            <a href="#parceiros" class="vb mf qf mb aj zg  cj bj hj hh s">Parceiros</a>
                             <a href="#sobre" class="vb nf sf mc mb aj cj bj zg hh s hj">Sobre</a>
                             <a href="#comoFunciona" class="vb mf qf mb aj cj bj hj hh s">Como funciona?</a>
                             <a href="#tecnologia" class="vb mf qf mb aj cj bj hj hh s">Tecnologia</a>
@@ -63,7 +64,7 @@ Copyright, GUILMOR - Soluções em Software
                             <div class="ac gg kg ng fi hc ec bi id v ab eb" :class="{ 'js-mobileNav-open': open }" @keydown.escape.window="open = false">
                                 <div class="wb bc jc ec jf xd i ai nd menus-app"> 
                                     <a href="index.html" class="vb nf sf mc mb aj cj bj zg hh s hj">Home</a>
-                                    <a href="#parceiros" class="vb mf qf mb aj cj bj hj hh s">Parceiros</a>
+                                    <a href="#parceiros" class="vb mf qf mb aj cj bj hj zg hh s">Parceiros</a>
                                     <a href="#sobre" class="vb nf sf mc mb aj cj bj zg hh s hj">Sobre</a>
                                     <a href="#comoFunciona" class="vb nf sf mc mb aj cj bj zg hh s hj">Como funciona?</a>
                                     <a href="#tecnologia" class="vb nf sf mc mb aj cj bj zg hh s hj">Tecnologia</a>
@@ -472,7 +473,30 @@ Copyright, GUILMOR - Soluções em Software
             </footer>
         </body>
         <script src="src/js/t-writer.js"></script>
+        <script src="src/js/cookieconsent.min.js" data-cfasync="false"></script>
         <script>
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#000000",
+                        "text": "#cfcfcf"
+                    },
+                    "button": {
+                        "background": "transparent",
+                        "text": "#8c7ab6",
+                        "border": "#8c7ab6"
+                    }
+                },
+                "type": "opt-out",
+                "content": {
+                    "message": "Este site usa cookies para garantir que você tenha a melhor experiência em nosso site.",
+                    "dismiss": "Vá em frente",
+                    "allow": "Vá em frente",
+                    "deny": "Não, valeu!",
+                    "link": "Leia mais"
+                }
+            });
+
             window.onload = function () {
                 setTimeout(() => {
                     document.getElementById("notbook").style.opacity = '1';

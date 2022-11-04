@@ -207,7 +207,8 @@ When using this, you will likely need to set font-variation-settings explicitly,
 
 html {
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
 }
 
 body {
