@@ -1,7 +1,3 @@
-footer{
-    padding-top: 100px;
-}
-
 .under:hover {
     cursor: pointer;
     color: #000;
@@ -73,4 +69,28 @@ li a{
     max-width: 1240px;
     padding-bottom: 50px;
     margin: 0 auto;
+}
+
+.cp{
+    margin-top: 60px;
+    padding: 0;
+    height: 500px;
+    display: flex;
+    background-color: #141414;
+    color: #FFF;
+
+    span:first-child {
+        font-size: 189px;
+        line-height: 396px;
+        top: -118px;
+        left: -4px;
+        position: relative;
+        font-weight: bold;
+    }
+
+    span:last-child{
+        -webkit-text-stroke: 1px #fff;
+        font-size: 72px;
+        color: #000;
+    }
 }

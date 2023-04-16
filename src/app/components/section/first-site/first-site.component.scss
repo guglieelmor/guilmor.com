@@ -22,6 +22,16 @@ section{
         padding-top: 11px;
         font-weight: lighter;
     }
+
+    @media (max-width: 1240px) {
+        .g-title{
+            font-size: 75px;
+        }  
+
+        .g-subtitle{
+            font-size: 28spx;
+        } 
+    }
 }
 
 .g-nav{
@@ -30,11 +40,22 @@ section{
     vertical-align: middle;
 }
 
+.g-h-content{
+    height: 400px;
+    background-color: #000;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    img{
+        position: absolute;
+    }
+}
 
 .g-gradient{
     background: linear-gradient(228deg, #fdfdfd, #ff5454, #54ff79, #5485ff, #ba54ff, #ff54bc, #ecff54, #dfdfdf, #0c96b6, #0cb647, #970cb6);
     background-size: 2200% 2200%;
-
     -webkit-animation: AnimationName 18s ease infinite;
     -moz-animation: AnimationName 18s ease infinite;
     -o-animation: AnimationName 18s ease infinite;
@@ -64,5 +85,3 @@ section{
     50%{background-position:100% 47%}
     100%{background-position:0% 54%}
 }
-
-
