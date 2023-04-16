@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-site',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./site.component.scss']
 })
 export class SiteComponent {
+
 
 }
