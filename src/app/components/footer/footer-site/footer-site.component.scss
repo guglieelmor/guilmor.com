@@ -7,6 +7,9 @@
     background-color: #FFF;
     max-width: 1240px;
     margin: 0 auto;
+    padding-top: 110px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .email{
@@ -43,6 +46,7 @@
     font-weight: inherit;
     line-height: inherit;
     text-align: inherit;
+    padding-top: 20px;
 }
 
 .g-redes ul li{
@@ -81,11 +85,11 @@ li a{
 
     span:first-child {
         font-size: 189px;
-        line-height: 396px;
-        top: -118px;
-        left: -4px;
+        top: -33px;
+        left: -3px;
         position: relative;
         font-weight: bold;
+        color: #ffffff75;
     }
 
     span:last-child{
@@ -93,4 +97,56 @@ li a{
         font-size: 72px;
         color: #000;
     }
+
+    @media (max-width: 1400px) {
+
+        span:first-child{
+            font-size: 70px;
+            top: -12px;
+        }  
+
+        span:last-child{
+            font-size: 42px;
+        }
+    }
 }
+
+@media (max-width: 1200px) {
+    .cp{
+        flex-direction: column;
+    }
+}
+
+.g-gradient{
+    background: linear-gradient(228deg, #ff5454, #54ff79, #5485ff, #ba54ff, #ff54bc, #ecff54, #dfdfdf, #0c96b6, #0cb647, #970cb6);
+    background-size: 2200% 2200%;
+    -webkit-animation: AnimationName 18s ease infinite;
+    -moz-animation: AnimationName 18s ease infinite;
+    -o-animation: AnimationName 18s ease infinite;
+    animation: AnimationName 18s ease infinite;
+}    
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 54%}
+    50%{background-position:100% 47%}
+    100%{background-position:0% 54%}
+}
+
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 54%}
+    50%{background-position:100% 47%}
+    100%{background-position:0% 54%}
+}
+
+@-o-keyframes AnimationName {
+    0%{background-position:0% 54%}
+    50%{background-position:100% 47%}
+    100%{background-position:0% 54%}
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 54%}
+    50%{background-position:100% 47%}
+    100%{background-position:0% 54%}
+}
+

@@ -1,6 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatInputModule } from '@angular/material/input';
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -11,6 +18,7 @@ import { SiteComponent } from './pages/site/site.component';
 import { FirstSiteComponent } from './components/section/first-site/first-site.component';
 import { LoaderSiteComponent } from './components/section/loader-site/loader-site.component';
 import { AboutComponent } from './pages/site/about/about.component';
+import { DialogContatoSiteComponent } from './components/dialog/dialog-contato-site/dialog-contato-site.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +28,16 @@ import { AboutComponent } from './pages/site/about/about.component';
     SiteComponent,
     FirstSiteComponent,
     LoaderSiteComponent,
-    AboutComponent
+    AboutComponent,
+    DialogContatoSiteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatDialogModule,
+    MatChipsModule,
+    MatButtonModule,
+    MatInputModule,
     BrowserAnimationsModule
   ],
   providers: [],

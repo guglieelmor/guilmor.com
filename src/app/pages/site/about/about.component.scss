@@ -1,0 +1,30 @@
+.g-grid{
+    height: 100vh;
+}
+
+.g-grid-content{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    align-items: center;
+    // height: 100vh;
+    overflow: hidden;
+    gap: 90px;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.d-flex{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bol{
+    background-color: red;
+    height: 70px;
+    width: 70px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
