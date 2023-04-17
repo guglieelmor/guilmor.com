@@ -1,14 +1,14 @@
 <section>
-    <div class="g-content">
-        <nav class="g-nav">
-            <div class="g-logo" [routerLink]="" [class.ani-logo]="aniLogo">
-                GUILMOR
-            </div>
-            <ul class="g-menu">
-                <li class="g-menu__item">sobre</li>
-                <li class="g-menu__item">parceiros</li>
-                <li class="g-menu__item">contato</li>
-            </ul>
-        </nav>
-    </div>
+    <header>
+        <div class="g-content">
+            <nav class="g-nav">
+                <div class="g-logo" [routerLink]="['']" [class.ani-logo]="aniLogo">GUILMOR</div>
+                <ul class="g-menu">
+                    <li class="g-menu__item" [routerLink]="['']">home</li>
+                    <li class="g-menu__item" [routerLink]="['sobre']">sobre</li>
+                    <li class="g-menu__item" mat-button (click)="openDialogContato()">contato</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 </section>
