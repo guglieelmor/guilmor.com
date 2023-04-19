@@ -18,9 +18,9 @@ import { SiteComponent } from './pages/site/site.component';
 import { FirstSiteComponent } from './components/section/first-site/first-site.component';
 import { LoaderSiteComponent } from './components/section/loader-site/loader-site.component';
 import { AboutComponent } from './pages/site/about/about.component';
-import { DialogContatoSiteComponent } from './components/dialog/dialog-contato-site/dialog-contato-site.component';
 import { SecundSiteComponent } from './components/section/secund-site/secund-site.component';
 import { ContactComponent } from './pages/site/contact/contact.component';
+import { PrivacyPolicyComponent } from './components/dialog/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +31,9 @@ import { ContactComponent } from './pages/site/contact/contact.component';
     FirstSiteComponent,
     LoaderSiteComponent,
     AboutComponent,
-    DialogContatoSiteComponent,
     SecundSiteComponent,
-    ContactComponent
+    ContactComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
