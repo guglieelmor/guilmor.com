@@ -5,8 +5,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
-
-
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -72,6 +73,9 @@ const cookieConfig:NgcCookieConsentConfig = {
     MatDialogModule,
     MatChipsModule,
     MatButtonModule,
+    MatDividerModule,
+    MatCardModule,
+    MatProgressBarModule,
     MatInputModule,
     BrowserAnimationsModule,
     NgcCookieConsentModule.forRoot(cookieConfig)
