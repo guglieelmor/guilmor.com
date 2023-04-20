@@ -1,6 +1,5 @@
 import { Component, AfterViewInit  } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogContatoSiteComponent } from '../../dialog/dialog-contato-site/dialog-contato-site.component';
 
 @Component({
   selector: 'app-header-site',
@@ -20,14 +19,6 @@ export class HeaderSiteComponent implements AfterViewInit{
       this.aniLogo = true;
       
     }, 0)
-  }
-
-  openDialogContato() {
-    const dialogRef = this.dialog.open(DialogContatoSiteComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
   }
 
 }
