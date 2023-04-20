@@ -22,6 +22,37 @@ import { SecundSiteComponent } from './components/section/secund-site/secund-sit
 import { ContactComponent } from './pages/site/contact/contact.component';
 import { PrivacyPolicyComponent } from './components/dialog/privacy-policy/privacy-policy.component';
 
+import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
+
+const cookieConfig:NgcCookieConsentConfig = {
+  "cookie": {
+    "domain": "guilmor.com"
+  },
+  "position": "bottom-right",
+  "theme": "block",
+  "palette": {
+    "popup": {
+      "background": "#dfdfdf",
+      "text": "#000000",
+      "link": "#ffffff"
+    },
+    "button": {
+      "background": "#000000",
+      "text": "#ffffff",
+      "border": "transparent"
+    }
+  },
+  "type": "info",
+  "content": {
+    "message": "Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site.",
+    "dismiss": "ENTENDI E FECHAR",
+    "deny": "",
+    "link": "",
+    "href": "https://cookiesandyou.com",
+    "policy": "Cookie Policy"
+  }
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +73,8 @@ import { PrivacyPolicyComponent } from './components/dialog/privacy-policy/priva
     MatChipsModule,
     MatButtonModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
