@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class EmailService {
 
-  private sendGridApiKey = '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';
+  private sendGridApiKey = '';
   private sendGridBaseUrl = 'https://api.sendgrid.com/v3/mail/send';
 
   constructor() { }
