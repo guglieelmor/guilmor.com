@@ -5,34 +5,47 @@
             <span>contato@guilmor.com</span>
         </div>
         <div class="g-form">
-            <div class="g-title__form">Hey! Tem um projeto?</div>
-            <div class="g-subtitle__form">Qual tipo do seu projeto?</div>
-            <div class="g-subtitle__form">Qual serviços que você precisa?</div>
-            <form class="example-form">
-                <table class="example-full-width" cellspacing="0">
-                    <tr>
-                        <td>
-                            <mat-form-field class="example-full-width">
-                                <mat-label>First name</mat-label>
-                                <input matInput>
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field class="example-full-width">
-                                <mat-label>Long Last Name That Will Be Truncated</mat-label>
-                                <input matInput>
-                            </mat-form-field>
-                        </td>
-                    </tr>
-                </table>
-                <p>
-                  <mat-form-field class="example-full-width">
-                    <mat-label>Address</mat-label>
-                    <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
-                  </mat-form-field>
-                </p>
-              </form>
-            <button class="g-btn">Enviar</button>
+            <div class="g-title__form p">Hey! Tem um projeto?</div>
+            <div class="g-subtitle__form p">Qual tipo do seu projeto?</div>
+            <div class="p">
+                <mat-chip-listbox aria-label="Fish selection">
+                    <mat-chip-option>Plataforma</mat-chip-option>
+                    <mat-chip-option>Aplicativo móvel</mat-chip-option>
+                    <mat-chip-option>Aplicativo web</mat-chip-option>
+                    <mat-chip-option>Site corporativo</mat-chip-option>
+                    <mat-chip-option>Outro</mat-chip-option>
+                </mat-chip-listbox>
+            </div>
+            <div class="g-subtitle__form p">Qual serviços que você precisa?</div>
+            <div class="p">
+                <mat-chip-listbox aria-label="Fish selection">
+                    <mat-chip-option>UX/UI Design</mat-chip-option>
+                    <mat-chip-option>Desenvolvimento</mat-chip-option>
+                    <mat-chip-option>UI conceito</mat-chip-option>
+                    <mat-chip-option>Designer Web</mat-chip-option>
+                    <mat-chip-option>Auditoria de UX</mat-chip-option>
+                    <mat-chip-option>Design gráfico</mat-chip-option>
+                    <mat-chip-option>Estratégia de produto</mat-chip-option>
+                    <mat-chip-option>Outro</mat-chip-option>
+                </mat-chip-listbox>
+            </div>
+            <div class="g-inputs">
+                <mat-form-field class="inputs p">
+                    <mat-label>Seu nome</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field class="inputs p">
+                    <mat-label>Seu e-mail</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div class="p">
+                <mat-form-field class="w100">
+                <mat-label>Conte-nos mais sobre sua ideia</mat-label>
+                <textarea matInput></textarea>
+                </mat-form-field>
+            </div>
+            <button (click)="sendEmail()" class="g-btn">ENVIAR</button>
         </div>
     </div>
 </section>
