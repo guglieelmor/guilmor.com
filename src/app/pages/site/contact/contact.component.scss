@@ -2,12 +2,17 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     overflow: hidden;
-    gap: 90px;
-    max-width: 80%;
-    height: 50vw;
     margin: 0 auto;
     padding-top: 10px;
     background-color: #FFF;
+
+}
+
+
+@media (max-width: 1300px) {
+    .g-grid{
+        grid-template-columns: 100%;
+    }
 }
 
 .g-info, .g-form{
@@ -34,7 +39,6 @@
     padding: 5px 0;
     padding-bottom: 10px;
     border-bottom: 3px solid #7f838d;
-    text-align: center;
 }
 
 .g-info span:nth-child(2):hover{
@@ -81,4 +85,44 @@
     box-shadow: inset 0 -4em 0 0 #fff;
     color: #000;
     border: 4px solid #141515;
+}
+
+.p{
+    padding: 12px 0;
+}
+
+.w100{
+    width: 100%;
+}
+
+.g-inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inputs{
+    width: 48%;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #fff!important;
+}
+
+@media (max-width: 680px) {
+    .g-title__form {
+        font-size: 34px;
+    }
+
+    .g-subtitle__form {
+        font-size: 22px;
+    }
+
+    .g-inputs{
+        flex-direction: column;
+    }
+
+    .inputs{
+        width: 100%;
+    }
 }
