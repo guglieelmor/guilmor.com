@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MailService {
-  host = 'http://localhost:2000/send';
+  private host = 'http://localhost:2000/send';
 
   constructor(private http: HttpClient) { }
 

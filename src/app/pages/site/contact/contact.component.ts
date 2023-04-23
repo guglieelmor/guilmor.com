@@ -11,7 +11,7 @@ export class ContactComponent implements OnInit{
   form!: FormGroup;
   submitClicked = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private mail: MailService) { }
 
   ngOnInit() {
     this.submitClicked = false;
@@ -28,7 +28,10 @@ export class ContactComponent implements OnInit{
   submitForm(){
     this.submitClicked = true;
     if(this.form.valid){
-      console.log(this.form.value)
+
+      this.mail.send(this.form.value).subscribe((response) => {
+        console.log(response)
+      })
 
     }
   }

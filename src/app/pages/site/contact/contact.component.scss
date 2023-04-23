@@ -1,3 +1,11 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 3px solid #7f838d;
+    padding-left: 20px;
+}
+
 .g-grid{
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -7,7 +15,6 @@
     background-color: #FFF;
 
 }
-
 
 @media (max-width: 1300px) {
     .g-grid{
@@ -132,4 +139,12 @@
 .mat-mdc-standard-chip.mat-primary.mat-mdc-chip-selected, .mat-mdc-standard-chip.mat-primary.mat-mdc-chip-highlighted {
     background-color: #000!important;
     color: white!important;
+}
+
+.mat-mdc-form-field-error,.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: #d70f00!important;
+}
+
+.mat-mdc-text-field-wrapper::before {
+    background-color: #fff!important; 
 }
