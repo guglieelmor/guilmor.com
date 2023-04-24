@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class MailService {
 
   private currentDate = new Date();
-  private host = 'http://localhost:2000/send';
+  private host = 'http://127.0.0.1:2000/send';
 
   constructor(private http: HttpClient) { 
     this.currentDate.toLocaleDateString()
