@@ -31,8 +31,8 @@ app.post('/send', async (req, res) => {
   const mail = { to: to, from: from, subject: subject, text: text };
   
   try {
+    Log.info({ mail: mail });
     await sgMail.send(mail);
-    Log.info(mail);
 
     res.status(200).send({
       status: 1,
@@ -40,7 +40,7 @@ app.post('/send', async (req, res) => {
     });
 
   } catch (err) {
-    Log.error(err);
+    Log.error({ mail: mail, err: err });
     
     res.status(500).send({
       status: 0,
