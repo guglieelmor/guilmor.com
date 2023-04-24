@@ -53,6 +53,7 @@
                     <mat-error *ngIf="submitClicked && form.get('ideia')?.hasError('minlength')">Dê mais detalhes, por favor.</mat-error>
                     </mat-form-field>
                 </div>
+                <mat-progress-bar *ngIf="showProgress == true" mode="query"></mat-progress-bar>
                 <button type="submit" (click)="submitForm()" class="g-btn">ENVIAR</button>
             </form>
         </div>
