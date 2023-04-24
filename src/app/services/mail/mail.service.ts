@@ -6,11 +6,31 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MailService {
+
+  private currentDate = new Date();
   private host = 'http://localhost:2000/send';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.currentDate.toLocaleDateString()
+  }
 
   send(data: any): Observable<any>{
-    return this.http.post(this.host, data);
+    return this.http.post(this.host, {
+      "to": "guilmor.softwares@gmail.com",
+      "from": "contato@guilmor.com",
+      "subject": `<CONTATO VIA SITE> - ${data.email}`,
+      "text": 
+        `Qual tipo do seu projeto? - ${ data.projeto }
+
+         Qual serviços que você precisa? - ${ data.servico }
+
+         Seu nome - ${ data.name }
+
+         Seu e-mail - ${ data.email }
+
+         Conte-nos mais sobre sua ideia - ${ data.ideia }
+
+         Data de envio - ${ this.currentDate }`
+    });
   }
 }

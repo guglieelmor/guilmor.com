@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,11 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
-import { ReactiveFormsModule } from '@angular/forms';
-
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { HeaderSiteComponent } from './components/header/header-site/header-site.component';
 import { FooterSiteComponent } from './components/footer/footer-site/footer-site.component';
@@ -28,6 +24,10 @@ import { ContactComponent } from './pages/site/contact/contact.component';
 import { PrivacyPolicyComponent } from './components/dialog/privacy-policy/privacy-policy.component';
 
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
+import { EmailComponent } from './components/dialog/email/email.component';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   "cookie": {
@@ -69,13 +69,15 @@ const cookieConfig:NgcCookieConsentConfig = {
     AboutComponent,
     SecundSiteComponent,
     ContactComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatDialogModule,
     ReactiveFormsModule,
+    MatSnackBarModule,
     MatChipsModule,
     MatButtonModule,
     HttpClientModule,
