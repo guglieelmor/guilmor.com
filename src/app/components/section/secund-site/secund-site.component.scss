@@ -1,30 +1,195 @@
-.g-grid{
+.g-grid {
     height: 100vh;
 }
 
-.g-grid-content{
+.g-grid-content {
     display: grid;
     grid-template-columns: 1.5fr 2fr;
     align-items: center;
-    // height: 100vh;
     overflow: hidden;
     gap: 90px;
     max-width: 1240px;
     margin: 0 auto;
 }
 
-.d-flex{
+.d-flex {
     display: flex;
     height: 100%;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
+    span {
+        font-size: 5rem;
+        font-weight: 600;
+    }
 }
 
-.bol{
-    background-color: red;
-    height: 70px;
-    width: 70px;
-    margin: 0 auto;
+.g-boxs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.g-box {
+    position: absolute;
+    height: 30rem;
+    width: 30rem;
+}
+
+.g-box:nth-child(1) {
+    background-color: #5485ff;
+}
+
+.g-box:nth-child(2) {
+    background-color: #ba54ff;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.g-box:nth-child(3) {
+    background-color: #ecff54;
+    margin-top: 60px;
+    margin-right: 60px;
+}
+
+.g-box:nth-child(4) {
+    background-color: rgb(77, 124, 77);
+    margin-top: 90px;
+    margin-right: 90px;
+}
+
+.g-box:nth-child(5) {
+    margin-top: 120px;
+    margin-right: 120px;
+}
+
+.g-bol {
+    position: absolute;
+    height: 30rem;
+    width: 30rem;
     border-radius: 50%;
+}
+
+.g-bol:nth-child(1) {
+    background-color: #5485ff;
+}
+
+.g-bol:nth-child(2) {
+    background-color: #ba54ff;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.g-bol:nth-child(3) {
+    background-color: #ecff54;
+    margin-top: 60px;
+    margin-right: 60px;
+}
+
+.g-bol:nth-child(4) {
+    background-color: rgb(77, 124, 77);
+    margin-top: 90px;
+    margin-right: 90px;
+}
+
+.g-bol:nth-child(5) {
+    margin-top: 120px;
+    margin-right: 120px;
+}
+
+@media (max-width: 1263px) {
+    .g-grid {
+        height: 50vh;
+    }
+
+    .g-boxs {
+        padding: 250px 0;
+    }
+
+    .d-flex {
+        span {
+            font-size: 3rem;
+        }
+    }
+
+    .g-bol {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .g-box {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .g-grid-content {
+        grid-template-columns: 2fr;
+    }
+    
+}
+
+.g-gradient {
+    background: linear-gradient(228deg, #fdfdfd, #ff5454, #54ff79, #5485ff, #ba54ff, #ff54bc, #ecff54, #dfdfdf, #0c96b6, #0cb647, #970cb6);
+    background-size: 2200% 2200%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    -o-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 54%
+    }
+
+    50% {
+        background-position: 100% 47%
+    }
+
+    100% {
+        background-position: 0% 54%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 54%
+    }
+
+    50% {
+        background-position: 100% 47%
+    }
+
+    100% {
+        background-position: 0% 54%
+    }
+}
+
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 0% 54%
+    }
+
+    50% {
+        background-position: 100% 47%
+    }
+
+    100% {
+        background-position: 0% 54%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 54%
+    }
+
+    50% {
+        background-position: 100% 47%
+    }
+
+    100% {
+        background-position: 0% 54%
+    }
 }
