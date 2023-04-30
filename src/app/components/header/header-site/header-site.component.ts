@@ -21,4 +21,8 @@ export class HeaderSiteComponent implements AfterViewInit{
     }, 0)
   }
 
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+  
 }

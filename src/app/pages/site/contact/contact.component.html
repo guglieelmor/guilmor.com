@@ -47,10 +47,10 @@
                 </div>
                 <div class="p">
                     <mat-form-field class="w100">
-                    <mat-label>Conte-nos mais sobre sua ideia</mat-label>
-                    <textarea matInput formControlName="ideia"></textarea>
-                    <mat-error *ngIf="submitClicked && form.get('ideia')?.hasError('required')">Por favor, fale sobre a sua ideia.</mat-error>
-                    <mat-error *ngIf="submitClicked && form.get('ideia')?.hasError('minlength')">Dê mais detalhes, por favor.</mat-error>
+                        <mat-label>Conte-nos mais sobre sua ideia</mat-label>
+                        <textarea matInput formControlName="ideia"></textarea>
+                        <mat-error *ngIf="submitClicked && form.get('ideia')?.hasError('required')">Por favor, fale sobre a sua ideia.</mat-error>
+                        <mat-error *ngIf="submitClicked && form.get('ideia')?.hasError('minlength')">Dê mais detalhes, por favor.</mat-error>
                     </mat-form-field>
                 </div>
                 <mat-progress-bar *ngIf="showProgress == true" mode="query"></mat-progress-bar>

@@ -8,10 +8,10 @@ import { PrivacyPolicyComponent } from '../../dialog/privacy-policy/privacy-poli
   styleUrls: ['./footer-site.component.scss']
 })
 export class FooterSiteComponent {
-  public date : Date = new Date();
-  public ano : number = this.date.getFullYear(); 
+  public date: Date = new Date();
+  public ano: number = this.date.getFullYear();
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) { }
 
   openDialogPrivacyPolicy() {
     const dialogRef = this.dialog.open(PrivacyPolicyComponent);

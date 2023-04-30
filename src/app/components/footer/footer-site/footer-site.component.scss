@@ -4,7 +4,7 @@
     text-decoration: underline;
 }
 
-.g-content{
+.g-content {
     background-color: #FFF;
     max-width: 1240px;
     margin: 0 auto;
@@ -13,38 +13,40 @@
     padding-right: 10px;
 }
 
-.email{
-    font-size: 21px!important;
+.email {
+    font-size: 21px !important;
 }
 
-.text-center{
-    justify-content: center!important;
+.text-center {
+    justify-content: center !important;
     text-align: center;
 }
 
-.g-flex{
+.g-flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.g-contato{
+.g-contato {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.g-info, .g-info-copy {
+.g-info,
+.g-info-copy {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.g-info:last-child, .g-info-copy:last-child {
+.g-info:last-child,
+.g-info-copy:last-child {
     justify-content: flex-start;
 }
 
-.info a{
+.info a {
     color: #424245;
     border-right: 1px solid #424245;
     padding-right: 15px;
@@ -54,27 +56,27 @@
     color: #424245;
 }
 
-.info:nth-child(1) a{
+.info:nth-child(1) a {
     padding-left: 0px;
 }
 
-.info:last-child a{
+.info:last-child a {
     border-right: 0px solid #424245;
 }
 
-.info a:hover{
+.info a:hover {
     text-decoration: underline;
     color: #000;
     cursor: pointer;
 }
 
-.hr{
+.hr {
     border-top: 1px solid #dfdfdf;
     padding: 5px 0;
     margin: 5px 0;
 }
 
-.copy{
+.copy {
     font-size: 1em;
     color: #6e6e73;
     padding: 10px 0;
@@ -84,27 +86,28 @@
     text-align: inherit;
 }
 
-.g-redes ul li{
+.g-redes ul li {
     list-style: none;
     font-size: 20px;
     font-weight: 400;
 }
 
-.p15{
+.p15 {
     padding-bottom: 15px;
 }
-.g-redes ul li:hover{
+
+.g-redes ul li:hover {
     text-decoration: underline;
     color: #000;
     cursor: pointer;
 }
 
-li a{
+li a {
     text-decoration: none;
     color: #6e6e73;
 }
 
-.g-more-informe{
+.g-more-informe {
     max-width: 1240px;
     padding-left: 10px;
     padding-right: 10px;
@@ -112,7 +115,7 @@ li a{
     margin: 0 auto;
 }
 
-.cp{
+.cp {
     padding: 0;
     height: 500px;
     display: flex;
@@ -128,64 +131,95 @@ li a{
         color: #ffffff75;
     }
 
-    span:last-child{
+    span:last-child {
         -webkit-text-stroke: 1px #fff;
         font-size: 72px;
         color: #000;
     }
 
     @media (max-width: 1400px) {
-        span:first-child{
+        span:first-child {
             font-size: 70px;
             top: -12px;
-        }  
+        }
 
-        span:last-child{
+        span:last-child {
             font-size: 42px;
         }
     }
 }
 
 @media (max-width: 1200px) {
-    .cp{
+    .cp {
         flex-direction: column;
     }
 
-    .g-info-copy{
+    .g-info-copy {
         flex-direction: column;
     }
 }
 
-.g-gradient{
+.g-gradient {
     background: linear-gradient(228deg, #ff5454, #54ff79, #5485ff, #ba54ff, #ff54bc, #ecff54, #dfdfdf, #0c96b6, #0cb647, #970cb6);
     background-size: 2200% 2200%;
     -webkit-animation: AnimationName 18s ease infinite;
     -moz-animation: AnimationName 18s ease infinite;
     -o-animation: AnimationName 18s ease infinite;
     animation: AnimationName 18s ease infinite;
-}    
+}
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 54%}
-    50%{background-position:100% 47%}
-    100%{background-position:0% 54%}
+    0% {
+        background-position: 0% 54%
+    }
+
+    50% {
+        background-position: 100% 47%
+    }
+
+    100% {
+        background-position: 0% 54%
+    }
 }
 
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 54%}
-    50%{background-position:100% 47%}
-    100%{background-position:0% 54%}
+    0% {
+        background-position: 0% 54%
+    }
+
+    50% {
+        background-position: 100% 47%
+    }
+
+    100% {
+        background-position: 0% 54%
+    }
 }
 
 @-o-keyframes AnimationName {
-    0%{background-position:0% 54%}
-    50%{background-position:100% 47%}
-    100%{background-position:0% 54%}
+    0% {
+        background-position: 0% 54%
+    }
+
+    50% {
+        background-position: 100% 47%
+    }
+
+    100% {
+        background-position: 0% 54%
+    }
 }
 
 @keyframes AnimationName {
-    0%{background-position:0% 54%}
-    50%{background-position:100% 47%}
-    100%{background-position:0% 54%}
-}
+    0% {
+        background-position: 0% 54%
+    }
 
+    50% {
+        background-position: 100% 47%
+    }
+
+    100% {
+        background-position: 0% 54%
+    }
+}

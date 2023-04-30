@@ -6,20 +6,19 @@ import { MailService } from 'src/app/services/mail/mail.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit{
+export class ContactComponent implements OnInit {
 
   form!: FormGroup;
   submitClicked = false;
   showProgress = false;
 
   constructor(
-    private formBuilder: FormBuilder, 
+    private formBuilder: FormBuilder,
     private mail: MailService,
     public dialog: MatDialog,
     private snackBar: MatSnackBar,
@@ -30,16 +29,16 @@ export class ContactComponent implements OnInit{
     this.form = this.formBuilder.group({
       projeto: new FormControl('', [Validators.required]),
       servico: new FormControl('', [Validators.required]),
-      name:    new FormControl('', [Validators.required]),
-      email:   new FormControl('', [Validators.required, Validators.email]),
-      ideia:   new FormControl('', [Validators.required, Validators.minLength(35)]),
+      name: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      ideia: new FormControl('', [Validators.required, Validators.minLength(35)]),
 
     });
   }
 
   async submitForm() {
     this.submitClicked = true;
-    if(this.form.valid){
+    if (this.form.valid) {
       this.showProgress = true;
 
       try {

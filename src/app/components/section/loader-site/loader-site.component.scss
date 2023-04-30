@@ -1,11 +1,12 @@
-*{
+* {
     background-color: #000;
 }
 
-.loader{
+.loader {
     height: 100vh;
 }
-.loader{
+
+.loader {
     top: 0;
     right: 0;
     bottom: 0;
@@ -17,84 +18,90 @@
     height: 100vh;
     position: fixed;
 
-    .w1{
+    .w1 {
         height: 49vh;
     }
-    .divider{
+
+    .divider {
         height: 1vh;
         background-color: #FFF;
         animation: identifier 3s ease 1 alternate;
     }
-    .w2{
+
+    .w2 {
         height: 50vh;
     }
 
     @keyframes identifier {
-        from{
+        from {
             width: 1%;
             background-color: #000;
         }
-        to{
+
+        to {
             width: 100%;
             background-color: #FFF;
         }
     }
-   
+
 }
 
-.out{
+.out {
     animation: noneloader 0.5s ease 1s 1 alternate;
     animation-fill-mode: forwards;
     margin: 0 auto;
- 
+
 
     @keyframes noneloader {
-        to{
+        to {
             width: 0vw;
             margin: 0 auto;
             opacity: 0;
         }
     }
-   
-    .w1{
+
+    .w1 {
         animation: nonew1 0.9s linear 1 alternate;
         animation-fill-mode: forwards;
     }
 
     @keyframes nonew1 {
-        from{
+        from {
             height: 49vh;
         }
-        to{
+
+        to {
             height: 0vh;
         }
     }
 
-    
-    .divider{
+
+    .divider {
         animation: expanddivider 1s ease 1 alternate;
-        animation-fill-mode: forwards; 
+        animation-fill-mode: forwards;
     }
-    
+
     @keyframes expanddivider {
-        from{
+        from {
             height: 0vh;
         }
-        to{
+
+        to {
             height: 100vh;
         }
     }
-    
-    .w2{
+
+    .w2 {
         animation: nonew2 0.9s linear 1 alternate;
-        animation-fill-mode: forwards; 
+        animation-fill-mode: forwards;
     }
 
     @keyframes nonew2 {
-        from{
+        from {
             height: 50vh;
         }
-        to{
+
+        to {
             height: 0vh;
         }
     }

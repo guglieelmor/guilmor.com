@@ -29,7 +29,7 @@ import { EmailComponent } from './components/dialog/email/email.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-const cookieConfig:NgcCookieConsentConfig = {
+const cookieConfig: NgcCookieConsentConfig = {
   "cookie": {
     "domain": "guilmor.com"
   },

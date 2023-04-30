@@ -8,6 +8,14 @@ import { NgcCookieConsentService } from 'ngx-cookieconsent';
 export class AppComponent{
   title = 'guilmor';
   
-  constructor(private ccService: NgcCookieConsentService) {}
-
+  constructor(private ccService: NgcCookieConsentService) {
+    console.table(`
+    -----------------------------------------------------------------------------
+    Version: 3.0.0.000
+    Author: Guilherme <GULLIVER> Oliveira, contato@guilmor.com
+    Copyright, GUILMOR - Soluções em Software
+    (https://www.guilmor.com/)
+    -----------------------------------------------------------------------------
+    `);
+  }
 }
