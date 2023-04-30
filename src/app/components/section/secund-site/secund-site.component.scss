@@ -22,6 +22,16 @@
     span {
         font-size: 5rem;
         font-weight: 600;
+        border-left: 3px solid #7f838d;
+        padding-left: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        color: #484848;
+        letter-spacing: 1px;
+        line-height: 20px;
     }
 }
 
@@ -29,6 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 50vh;
 }
 
 .g-box {
@@ -98,13 +109,39 @@
     margin-right: 120px;
 }
 
+@media (max-width: 500px) {
+    .d-flex {
+        padding: 11px;
+    }
+
+    p {
+        width: 100%!important;
+    }
+
+    span {
+        width: 100%!important;
+    }
+}
+
+@media (max-width: 1414px) {
+    .g-bol {
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .g-box {
+        height: 20rem;
+        width: 20rem;
+    }
+}
+
 @media (max-width: 1263px) {
     .g-grid {
         height: 50vh;
     }
 
-    .g-boxs {
-        padding: 250px 0;
+    .d-item {
+        width: 50%;
     }
 
     .d-flex {
@@ -126,7 +163,7 @@
     .g-grid-content {
         grid-template-columns: 2fr;
     }
-    
+
 }
 
 .g-gradient {
