@@ -9,15 +9,16 @@ export class AppComponent{
   title = 'guilmor';
   
   constructor(private ccService: NgcCookieConsentService) {
-    console.log(`
+    console.clear();
+    console.log(`%c
     -----------------------------------------------------------------------------
     Version: 3.0.0.000
     Author: Guilherme <GULLIVER> Oliveira, contato@guilmor.com
     Copyright, GUILMOR - Soluções em Software
     (https://www.guilmor.com/)
     -----------------------------------------------------------------------------
-    `);
-    console.log(`The original Apple Macintosh (referred to now as the "Mac Classic").`);
+    `,  'font-size: 20px; color: red;');
+    console.log(`%c The original Apple Macintosh (referred to now as the "Mac Classic").`, 'font-size: 15px; color: orange;');
     console.log(`
                        __________________________
                __..--/".'                        '.
