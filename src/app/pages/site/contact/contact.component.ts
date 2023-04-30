@@ -67,10 +67,6 @@ export class ContactComponent implements OnInit{
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
-
-    setTimeout(() => {
-      this.router.navigate(['']);
-    }, 3000)
   }
 
   openSnackBar(message: string, action: string) {
@@ -81,7 +77,7 @@ export class ContactComponent implements OnInit{
     });
 
     setTimeout(() => {
-      this.router.navigate(['']);
-    }, 4950)
+      this.router.navigate(['/']);
+    }, 4800)
   }
 }
