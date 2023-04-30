@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
-sgMail.setApiKey('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');
+sgMail.setApiKey('');
 
 const Log = winston.createLogger({
   level: 'info',
