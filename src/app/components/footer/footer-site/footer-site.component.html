@@ -14,9 +14,6 @@
         <div class="g-content g-flex">
             <div class="g-contato">
                 <div class="copy under email">
-                    GUILMOR - Soluções em Softwares
-                </div>
-                <div class="copy under email">
                     contato@guilmor.com
                 </div>
                 <div class="copy under">
@@ -39,8 +36,10 @@
                 <div class="copy">created by @ <a class="under " target="_blank" href="https://www.linkedin.com/in/guglieelmor/">Guilherme Oliveira</a>.</div>
             </div>
             <div class="g-info">
+                <div class="info"><a [routerLink]="['/']" (click)="scrollToTop()">Home</a></div>
+                <div class="info"><a [routerLink]="['sobre']" (click)="scrollToTop()">Sobre</a></div>
+                <div class="info"><a [routerLink]="['contato']" (click)="scrollToTop()">Contato</a></div>
                 <div class="info" (click)="openDialogPrivacyPolicy()"><a>Política de Privacidade</a></div>
-                <div class="info"><a target="_blank" href="https://github.com/guglieelmor/guilmor">GitHub</a></div>
             </div>
         </div>
     </footer>

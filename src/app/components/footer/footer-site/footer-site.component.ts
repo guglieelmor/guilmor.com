@@ -20,4 +20,8 @@ export class FooterSiteComponent {
       console.log(`Dialog result: ${result}`);
     });
   }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
 }
