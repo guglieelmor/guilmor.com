@@ -6,7 +6,25 @@ section {
 .g-img {
     background-image: url('/assets/img/waves-background.webp');
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    animation: girar 70s linear infinite;
+}
+
+@keyframes girar {
+    0% {
+        background-position: 0 0;
+        opacity: 1;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        opacity: 0.8;
+    }
+
+    100% {
+        background-position: 0 0;
+        opacity: 1;
+    }
 }
 
 @media (max-width: 874px) {
