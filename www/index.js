@@ -2,15 +2,13 @@ const express    = require('express');
 const sgMail     = require('@sendgrid/mail');
 const bodyParser = require('body-parser');
 const winston    = require('winston');
+const cors       = require('cors');
 
 const app = express();
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200'); 
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
+app.use(cors({
+  origin: 'https://guilmor.com'
+}));
 
 app.use(bodyParser.json());
 
@@ -49,6 +47,6 @@ app.post('/send', async (req, res) => {
   }
 });
 
-app.listen(2000, () => {
+app.listen(2000, '0.0.0.0', () => {
   console.log('Server starting with port 2000.');
 });
