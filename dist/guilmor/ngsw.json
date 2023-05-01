@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1682982005056,
+  "timestamp": 1682983689403,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -61,7 +61,7 @@
     "/assets/img/waves-background.webp": "1bb57a54baa2c0fc01c4126b3fac0b29e8dfbe2d",
     "/assets/video/coding.mp4": "56c70b33a3e8b91b581ebda8ea8fff7baf48d9bc",
     "/favicon.ico": "fc24a80665b3e4c84f629bdf527ab5736fec1794",
-    "/index.html": "21cb6f4e124aef10da40769f2299990caa813c2a",
+    "/index.html": "69ce8fe75d5485bc1dbb8bfdc0e51eab1294432e",
     "/main.357d66d107a8daaa.js": "08791b9d0f8719ed3a7453a0f597ef4fd50b14d4",
     "/manifest.webmanifest": "0d2d521ace2ec0e78ef91fdd7a8f112db75cd8d2",
     "/polyfills.2119253873505773.js": "d9a12f5415982bc6454ae24fe3fd93cddd1c4b7c",
