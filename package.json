@@ -1,6 +1,6 @@
 {
   "name": "guilmor",
-  "version": "0.0.0",
+  "version": "3.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "@angular/service-worker": "^15.2.0",
     "aos": "^2.3.4",
     "cookieconsent": "^3.1.1",
     "ngx-cookieconsent": "^4.0.2",
