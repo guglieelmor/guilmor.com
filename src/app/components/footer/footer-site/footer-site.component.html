@@ -24,8 +24,8 @@
             </div>
             <div class="g-redes">
                 <ul>
-                    <li class="p15"><a href="https://www.linkedin.com/company/guilmorsoftwares/" target="_blank" title="GUILMOR - LINKDIN">Linkedin</a></li>
-                    <li><a href="https://www.instagram.com/guilmor_softwares/" target="_blank" title="GUILMOR - INSTAGRAM">Instagram</a>
+                    <li class="p15"><a title="Linkedin" href="https://www.linkedin.com/company/guilmorsoftwares/" target="_blank" title="GUILMOR - LINKDIN">Linkedin</a></li>
+                    <li><a title="Instagram" href="https://www.instagram.com/guilmor_softwares/" target="_blank" title="GUILMOR - INSTAGRAM">Instagram</a>
                 </ul>
             </div>
         </div>
@@ -33,13 +33,13 @@
             <div class="hr"></div>
             <div class="g-info-copy">
                 <div class="copy">Copyright © {{ ano }} GUILMOR. Todos os direitos reservados.</div>
-                <div class="copy">created by @ <a class="under " target="_blank" href="https://www.linkedin.com/in/guglieelmor/">Guilherme Oliveira</a>.</div>
+                <div class="copy">created by @ <a title="Linkedin" class="under" target="_blank" href="https://www.linkedin.com/in/guglieelmor/">Guilherme Oliveira</a>.</div>
             </div>
             <div class="g-info">
-                <div class="info"><a [routerLink]="['/']" (click)="scrollToTop()">Home</a></div>
-                <div class="info"><a [routerLink]="['sobre']" (click)="scrollToTop()">Sobre</a></div>
-                <div class="info"><a [routerLink]="['contato']" (click)="scrollToTop()">Contato</a></div>
-                <div class="info" (click)="openDialogPrivacyPolicy()"><a>Política de Privacidade</a></div>
+                <div class="info"><p title="Home do site" routerLink="/" (click)="scrollToTop()">Home</p></div>
+                <div class="info"><p title="Sobre do site" routerLink="/sobre" (click)="scrollToTop()">Sobre</p></div>
+                <div class="info"><p title="Contato do site" routerLink="/contato" (click)="scrollToTop()">Contato</p></div>
+                <div class="info" (click)="openDialogPrivacyPolicy()"><p title="Política de Privacidade">Política de Privacidade</p></div>
             </div>
         </div>
     </footer>

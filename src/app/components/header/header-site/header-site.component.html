@@ -2,11 +2,11 @@
     <header>
         <div class="g-content">
             <nav class="g-nav">
-                <div class="g-logo" [routerLink]="['/']" [class.ani-logo]="aniLogo">GUILMOR</div>
+                <div class="g-logo" routerLink="/" [class.ani-logo]="aniLogo">GUILMOR</div>
                 <ul class="g-menu">
-                    <li class="g-menu__item" [routerLink]="['/']" (click)="scrollToTop()">home</li>
-                    <li class="g-menu__item" [routerLink]="['sobre']" (click)="scrollToTop()">sobre</li>
-                    <li class="g-menu__item" [routerLink]="['contato']" (click)="scrollToTop()">contato</li>
+                    <li class="g-menu__item" routerLink="/" (click)="scrollToTop()">home</li>
+                    <li class="g-menu__item" routerLink="/sobre" (click)="scrollToTop()">sobre</li>
+                    <li class="g-menu__item" routerLink="/contato" (click)="scrollToTop()">contato</li>
                 </ul>
             </nav>
         </div>
