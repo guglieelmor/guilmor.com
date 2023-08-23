@@ -34,7 +34,7 @@ const cookieConfig: NgcCookieConsentConfig = {
   "cookie": {
     "domain": "guilmor.com"
   },
-  "position": "bottom-right",
+  "position": "bottom-left",
   "theme": "block",
   "palette": {
     "popup": {
