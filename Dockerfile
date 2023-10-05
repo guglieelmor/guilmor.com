@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm config set timeout 6000000
+
+RUN npm install --prefer-offline --no-audit
 
 RUN npm install -g @angular/cli
 
