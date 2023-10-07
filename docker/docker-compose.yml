@@ -4,34 +4,15 @@ services:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
     ports:
-      - '80:4200'  
+      - '80:4200' 
       - '443:443' 
-      - '81:81'  
-    environment:
-      DB_MYSQL_HOST: "mariadb"
-      DB_MYSQL_PORT: 3306
-      DB_MYSQL_USER: "gulliver"
-      DB_MYSQL_PASSWORD: "279494258e0f6d1b8d762528dc0ec779"
-      DB_MYSQL_NAME: "gulliver"
+      - '81:81'
+    networks:
+      - vps_gulliver
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
-    networks:
-      - vps_gulliver
-    depends_on:
-      - mariadb
-  mariadb:
-    image: 'jc21/mariadb-aria:latest'
-    restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: '279494258e0f6d1b8d762528dc0ec779'
-      MYSQL_DATABASE: 'gulliver'
-      MYSQL_USER: 'gulliver'
-      MYSQL_PASSWORD: '279494258e0f6d1b8d762528dc0ec779'
-    volumes:
-      - ./mysql:/var/lib/mysql
-    networks:
-      - vps_gulliver
 networks:
+  default: 
   vps_gulliver:
     external: true
