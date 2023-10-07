@@ -2,7 +2,7 @@ FROM node:20
 
 WORKDIR /app
 
-COPY /dist .
+COPY /dist/guilmor .
 
 EXPOSE 4200
 
