@@ -1,6 +1,6 @@
 version: '3'
 services:
-  gulliver_site:
+  guilmor_site:
     build:
       context: .
       dockerfile: Dockerfile
