@@ -1,32 +1,37 @@
 version: '3.8'
 services:
-  proxy:
+  nginx_proxy_manager:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
-    container_name: nginx_proxy_manager
     ports:
-      - '80:80'  
+      - '80:4200'  
       - '443:443' 
       - '81:81'  
     environment:
-      DB_MYSQL_HOST: "db"
+      DB_MYSQL_HOST: "mariadb"
       DB_MYSQL_PORT: 3306
-      DB_MYSQL_USER: "npm"
-      DB_MYSQL_PASSWORD: "npm"
-      DB_MYSQL_NAME: "npm"
+      DB_MYSQL_USER: "gulliver"
+      DB_MYSQL_PASSWORD: "279494258e0f6d1b8d762528dc0ec779"
+      DB_MYSQL_NAME: "gulliver"
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
+    networks:
+      - vps_gulliver
     depends_on:
-      - db
-  db:
+      - mariadb
+  mariadb:
     image: 'jc21/mariadb-aria:latest'
     restart: unless-stopped
-    container_name: mysql_db
     environment:
-      MYSQL_ROOT_PASSWORD: 'npm'
-      MYSQL_DATABASE: 'npm'
-      MYSQL_USER: 'npm'
-      MYSQL_PASSWORD: 'npm'
+      MYSQL_ROOT_PASSWORD: '279494258e0f6d1b8d762528dc0ec779'
+      MYSQL_DATABASE: 'gulliver'
+      MYSQL_USER: 'gulliver'
+      MYSQL_PASSWORD: '279494258e0f6d1b8d762528dc0ec779'
     volumes:
       - ./mysql:/var/lib/mysql
+    networks:
+      - vps_gulliver
+networks:
+  vps_gulliver:
+    external: true
