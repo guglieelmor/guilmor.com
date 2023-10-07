@@ -1,6 +1,7 @@
 version: '3'
 services:
   guilmor_site:
+    container_name: guilmor_site
     build:
       context: .
       dockerfile: Dockerfile

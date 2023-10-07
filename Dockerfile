@@ -2,16 +2,9 @@ FROM node:20
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY /dist .
 
-RUN npm config set fetch-retry-maxtimeout 600000000
+EXPOSE 4200
 
-RUN npm install --prefer-offline --no-audit
+CMD ["npx", "http-server", "-p", "4200"]
 
-COPY . .
-
-RUN npm run build
-
-EXPOSE 4576
-
-CMD ["npm", "start"]
