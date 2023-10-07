@@ -4,7 +4,7 @@ services:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
     ports:
-      - '80:4200' 
+      - '80:80' 
       - '443:443' 
       - '81:81'
     volumes:
