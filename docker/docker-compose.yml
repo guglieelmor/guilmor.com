@@ -7,12 +7,7 @@ services:
       - '80:4200' 
       - '443:443' 
       - '81:81'
-    networks:
-      - vps_gulliver
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
-networks:
-  default: 
-  vps_gulliver:
-    external: true
+      
