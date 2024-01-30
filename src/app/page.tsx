@@ -1,10 +1,12 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/button"
+import Link from 'next/link';
+import Header from "@/components/header";
+import Slogan from '@/components/slogan';
 
 export default function Home() {
   return (
     <>
-      <Button>Click me</Button>
+      <Header />
+      <Slogan />
     </>
   );
 }
