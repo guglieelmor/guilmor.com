@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --grey: #27282c;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -46,5 +47,74 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
+  }
+
+  .g-grey-black {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(39, 40, 44, 1) 100%);
+  }
+
+  .g-gradient {
+    background: linear-gradient(228deg, #fdfdfd, #ff5454, #54ff79, #5485ff, #ba54ff, #ff54bc, #ecff54, #dfdfdf, #0c96b6, #0cb647, #970cb6);
+    background-size: 2200% 2200%;
+    -webkit-animation: AnimationName 18s ease infinite;
+    -moz-animation: AnimationName 18s ease infinite;
+    -o-animation: AnimationName 18s ease infinite;
+    animation: AnimationName 18s ease infinite;
+  }
+
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 54%
+    }
+
+    50% {
+      background-position: 100% 47%
+    }
+
+    100% {
+      background-position: 0% 54%
+    }
+  }
+
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 0% 54%
+    }
+
+    50% {
+      background-position: 100% 47%
+    }
+
+    100% {
+      background-position: 0% 54%
+    }
+  }
+
+  @-o-keyframes AnimationName {
+    0% {
+      background-position: 0% 54%
+    }
+
+    50% {
+      background-position: 100% 47%
+    }
+
+    100% {
+      background-position: 0% 54%
+    }
+  }
+
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 54%
+    }
+
+    50% {
+      background-position: 100% 47%
+    }
+
+    100% {
+      background-position: 0% 54%
+    }
   }
 }

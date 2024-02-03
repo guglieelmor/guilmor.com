@@ -1,9 +1,11 @@
-import Navbar from "@/components/navbar";
+import Slogan from "@/components/slogan";
 
 export default function Header() {
   return (
     <>
-      <Navbar />
+      <Slogan />
+      <Slogan />
+      <Slogan />
     </>
   );
 }

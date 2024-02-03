@@ -1,12 +1,13 @@
-import Link from 'next/link';
-import Header from "@/components/header";
-import Slogan from '@/components/slogan';
+import Navbar from "@/components/navbar";
+import Header from '@/components/header';
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <>
+    <> 
+      <Navbar />
       <Header />
-      <Slogan />
+      <Footer /> 
     </>
   );
 }
