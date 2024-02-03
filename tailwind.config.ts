@@ -30,9 +30,11 @@ const config = {
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
+        ring: "hsl(var(--ring))", 
+        white: "#fff",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        grey100: "#a9a9ab",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
