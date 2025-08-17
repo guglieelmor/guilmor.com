@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>GUILMOR - Tecnologia, Desenvolvimento e Inovação</title>
+</svelte:head>
+
 <script>
     import Content from "$lib/components/content.svelte";
     import Navbar from "$lib/components/navbar.svelte";

@@ -3,7 +3,7 @@
     import EvervaultCard from "./ui/EvervaultCard/EvervaultCard.svelte";
 </script>
 <header
-    class="container max-w-[1200px] mx-auto border-r-0 border-l-0 lg:border-r lg:border-l border-gray-700 flex flex-col justify-center bg-black z-50 px-2.5 lg:px-0">
+    class="container max-w-[1200px] mx-auto border-r-0 border-l-0 lg:border-r lg:border-l border-gray-700 flex flex-col justify-center bg-black px-2.5 lg:px-0">
     <div class="relative">
         <div
             class="group pointer-events-none absolute inset-0 flex size-full flex-col items-center justify-center self-start">
@@ -11,17 +11,17 @@
                 style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
                 src="/ai-header.png">
         </div>
-        <div class="grid gap-1 py-12 lg:grid-cols-[1fr_auto] lg:py-20 lg:pl-12 z-50">
+        <div class="grid gap-1 py-12 lg:grid-cols-[1fr_auto] lg:py-20 lg:pl-12">
             <div class="flex flex-col items-start justify-center gap-5 lg:gap-8">
                 <h1
-                    class="text-foreground text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl z-50 font-semibold">
+                    class="text-foreground text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl font-semibold z-10">
                     Design e Tecnologia para criar produtos digitais inovadores e de impacto
                 </h1>
-                <p class="font-inter-tight text-mid-gray text-base md:text-lg lg:text-xl z-50">
+                <p class="font-inter-tight text-mid-gray text-base md:text-lg lg:text-xl z-10">
                     Estratégia, consultoria e desenvolvimento para transformar ideias em soluções digitais que crescem
                     com o seu negócio.
                 </p>
-                <div class="flex flex-wrap items-start gap-4 z-50">
+                <div class="flex flex-wrap items-start gap-4">
                     <Button class="h-10 px-6 py-5 hover:bg-gray-800 shadow-lg border border-gray-700"
                         variant="secondary">
                         <a href="/pricing">Secondary</a>
