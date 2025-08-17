@@ -30,9 +30,11 @@
         faqs[index].open = !faqs[index].open;
     }
 </script>
-<section class="bg-black relative overflow-hidden px-2.5 lg:px-0">
-    <div class="border-l-dark-gray border-r-dark-gray border-t-dark-gray relative container border px-0">
-        <div class="border-b-dark-gray border-b px-6 py-8 lg:px-8 lg:py-20">
+<section
+    class="max-w-[1200px] mx-auto bg-black flex flex-col items-start justify-start overflow-x-auto rounded-none p-0 lg:basis-1/4 lg:flex-row px-2.5 lg:px-0">
+    <div
+        class="border-r border-l border-t border-gray-700 text-foreground h-full min-h-56 w-full items-start justify-start rounded-none text-start whitespace-normal">
+        <div class="border-gray-700 border-b px-6 py-8 lg:px-8 lg:py-20">
             <div class="flex max-w-lg flex-col gap-4 lg:gap-6">
                 <h1 class="text-foreground text-3xl tracking-tight">FAQs</h1>
                 <p class="text-mid-gray text-base">Perguntas frequentes.</p>
@@ -41,7 +43,7 @@
         <div>
             <div class="text-foreground">
                 {#each faqs as faq, i}
-                <div class="border-b-dark-gray border-b p-6 transition-colors duration-200" class:bg-jet={faq.open}>
+                <div class="border-gray-700 border-b p-6 transition-colors duration-200" class:bg-jet={faq.open}>
                   <h3 class="flex">
                     <button
                       type="button"
