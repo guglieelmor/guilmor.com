@@ -138,6 +138,13 @@
 				<NavigationMenu.Root viewport={false}>
 					<NavigationMenu.List>
 						<NavigationMenu.Item>
+							<NavigationMenu.Link>
+								{#snippet child()}
+									<a href="/" class={navigationMenuTriggerStyle()}>/</a>
+								{/snippet}
+							</NavigationMenu.Link>
+						</NavigationMenu.Item>
+						<NavigationMenu.Item>
 							<NavigationMenu.Trigger>Produtos</NavigationMenu.Trigger>
 							<NavigationMenu.Content>
 								<ul class="grid gap-2 p-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
