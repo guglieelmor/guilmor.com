@@ -3,7 +3,7 @@
 </script>
 
 <footer
-	class="relative z-50 flex justify-center border-t border-b border-gray-700 bg-black px-2.5 lg:px-0"
+	class="relative z-40 flex justify-center border-t border-b border-gray-700 bg-black px-2.5 lg:px-0"
 >
 	<div class="container max-w-[1200px] border-r border-l border-gray-700 bg-black">
 		<div class="grid p-0 lg:grid-cols-2">
@@ -99,7 +99,7 @@
 						data-nimg="1"
 						class="border border-gray-800 invert dark:invert-0"
 						style="color:transparent"
-						src="guilmor.svg"
+						src="/logo/guilmor.svg"
 					/>
 				</a>
 			</div>
@@ -111,12 +111,16 @@
 					Ltda. CNPJ: 62.251.346/0001-10
 				</p>
 			</div>
-			<div class="flex flex-col items-center gap-2 text-gray-400 sm:flex-row sm:justify-end">
-				<a class="text-xs underline hover:text-muted-foreground" href="/privacy"
+			<div
+				class="flex flex-col items-start gap-2 pt-7 text-gray-400 sm:flex-row sm:justify-end lg:items-center lg:pt-0"
+			>
+				<a class="text-xs underline hover:text-muted-foreground" href="/politica-de-privacidade"
 					>Política de Privacidade</a
 				>
-				<a class="text-xs underline hover:text-muted-foreground" href="/terms">Termos de Uso</a>
-				<a class="text-xs underline hover:text-muted-foreground" href="/subscription-terms"
+				<a class="text-xs underline hover:text-muted-foreground" href="/termo-de-uso"
+					>Termos de Uso</a
+				>
+				<a class="text-xs underline hover:text-muted-foreground" href="/termo-de-assinatura"
 					>Termos de Assinatura</a
 				>
 			</div>

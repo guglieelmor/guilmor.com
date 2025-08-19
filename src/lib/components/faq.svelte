@@ -37,62 +37,46 @@
 	}
 </script>
 
-<section
-	class="mx-auto flex max-w-[1200px] flex-col items-start justify-start overflow-x-auto rounded-none bg-black p-0 px-2.5 lg:basis-1/4 lg:flex-row lg:px-0"
->
-	<div
-		class="h-full min-h-56 w-full items-start justify-start rounded-none border-t border-r border-l border-gray-700 text-start whitespace-normal text-foreground"
-	>
-		<div class="border-b border-gray-700 px-6 py-8 lg:px-8 lg:py-20">
-			<div class="flex max-w-lg flex-col gap-4 lg:gap-6">
-				<h1 class="text-3xl tracking-tight text-foreground">FAQs</h1>
-				<p class="text-mid-gray text-base">Perguntas frequentes.</p>
-			</div>
-		</div>
-		<div>
-			<div class="text-foreground">
-				{#each faqs as faq, i}
-					<div
-						class="border-b border-gray-700 p-6 transition-colors duration-200"
-						class:bg-jet={faq.open}
+<div class="text-foreground">
+	{#each faqs as faq, i}
+		<div
+			class="border-b border-gray-700 p-6 transition-colors duration-200"
+			class:bg-jet={faq.open}
+		>
+			<h3 class="flex">
+				<button
+					type="button"
+					class="flex flex-1 items-center justify-between py-4 text-left text-xl font-medium transition-all hover:underline"
+					on:click={() => toggle(i)}
+					aria-expanded={faq.open}
+				>
+					{faq.question}
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="text-muted-foreground transition-transform duration-200"
+						class:rotate-180={faq.open}
 					>
-						<h3 class="flex">
-							<button
-								type="button"
-								class="flex flex-1 items-center justify-between py-4 text-left text-xl font-medium transition-all hover:underline"
-								on:click={() => toggle(i)}
-								aria-expanded={faq.open}
-							>
-								{faq.question}
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									class="text-muted-foreground transition-transform duration-200"
-									class:rotate-180={faq.open}
-								>
-									<path d="m6 9 6 6 6-6"></path>
-								</svg>
-							</button>
-						</h3>
+						<path d="m6 9 6 6 6-6"></path>
+					</svg>
+				</button>
+			</h3>
 
-						{#if faq.open}
-							<div class="mt-2 animate-accordion-down overflow-hidden text-sm">
-								{faq.answer}
-							</div>
-						{/if}
-					</div>
-				{/each}
-			</div>
+			{#if faq.open}
+				<div class="mt-2 animate-accordion-down overflow-hidden text-sm">
+					{faq.answer}
+				</div>
+			{/if}
 		</div>
-	</div>
-</section>
+	{/each}
+</div>
 
 <style>
 	@keyframes accordion-down {

@@ -1,10 +1,10 @@
 <script>
-    import Faq from "./faq.svelte";
-	import Header from "./header.svelte"; 
-</script>
+	import Footer from '$lib/components/footer.svelte'; 
+	import Navbar from '$lib/components/navbar.svelte'; 
+</script> 
 
-<Header />
-
-<Faq />
-
- 
+<div class="h-screen"> 
+	<Navbar />
+	<slot />
+	<Footer />
+</div>

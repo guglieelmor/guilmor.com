@@ -1,15 +1,14 @@
-<svelte:head>
-  <title>FAQ</title>
-</svelte:head>
-
-<script> 
-    import Navbar from "$lib/components/navbar.svelte";
-    import Footer from "$lib/components/footer.svelte"; 
-	import Faq from "$lib/components/faq.svelte";
+<script>
+	import Content from '$lib/components/content.svelte';
+	import Faq from '$lib/components/faq.svelte';
+	import View from '$lib/components/view.svelte';
 </script>
 
-<div class="h-screen">
-    <Navbar />  
-    <Faq /> 
-    <Footer />
-</div>
+<svelte:head>
+	<title>FAQ</title>
+</svelte:head>
+<Content>
+	<View title="FAQ" description="Perguntas frequentes.">
+		<Faq />
+	</View>
+</Content>

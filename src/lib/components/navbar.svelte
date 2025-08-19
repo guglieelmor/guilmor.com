@@ -3,50 +3,9 @@
 	import { cn } from '$lib/utils.js';
 	import { navigationMenuTriggerStyle } from '$lib/components/ui/navigation-menu/navigation-menu-trigger.svelte';
 	import type { HTMLAttributes } from 'svelte/elements';
-	import CircleHelpIcon from '@lucide/svelte/icons/circle-help';
-	import CircleIcon from '@lucide/svelte/icons/circle';
-	import CircleCheckIcon from '@lucide/svelte/icons/circle-check';
-
-	const components: {
-		title: string;
-		href: string;
-		description: string;
-	}[] = [
-		{
-			title: 'Alert Dialog',
-			href: '/docs/components/alert-dialog',
-			description:
-				'A modal dialog that interrupts the user with important content and expects a response.'
-		},
-		{
-			title: 'Hover Card',
-			href: '/docs/components/hover-card',
-			description: 'For sighted users to preview content available behind a link.'
-		},
-		{
-			title: 'Progress',
-			href: '/docs/components/progress',
-			description:
-				'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.'
-		},
-		{
-			title: 'Scroll-area',
-			href: '/docs/components/scroll-area',
-			description: 'Visually or semantically separates content.'
-		},
-		{
-			title: 'Tabs',
-			href: '/docs/components/tabs',
-			description:
-				'A set of layered sections of content—known as tab panels—that are displayed one at a time.'
-		},
-		{
-			title: 'Tooltip',
-			href: '/docs/components/tooltip',
-			description:
-				'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.'
-		}
-	];
+	import { slide } from 'svelte/transition';
+	let open = false;
+	const toggleMenu = () => (open = !open);
 
 	type ListItemProps = HTMLAttributes<HTMLAnchorElement> & {
 		title: string;
@@ -86,14 +45,10 @@
 			open: false
 		}
 	];
-
-	function toggle(index) {
-		faqs[index].open = !faqs[index].open;
-	}
 </script>
 
 <navbar
-	class="relative z-50 flex h-20 justify-center border-b border-gray-300 bg-black px-2.5 lg:px-0 dark:border-gray-700"
+	class="relative z-40 flex h-20 justify-center border-b border-gray-300 bg-black px-2.5 lg:px-0 dark:border-gray-700"
 >
 	<div
 		class="container flex h-20 max-w-[1200px] items-center border-r border-b border-l border-gray-700 bg-black"
@@ -109,10 +64,40 @@
 					decoding="async"
 					data-nimg="1"
 					style="color:transparent"
-					src="guilmor.svg"
+					src="/logo/guilmor.svg"
 				/>
 			</a>
-			<div class="mr-4 flex items-center justify-center">
+			<div
+				class="fixed top-7 right-4 z-50 flex h-6 w-6 cursor-pointer flex-col justify-between sm:hidden"
+				on:click={toggleMenu}
+			>
+				<span
+					class="block h-1 transform rounded bg-white transition duration-300"
+					class:rotate-45={open}
+					class:translate-y-3={open}
+				>
+				</span>
+				<span class="block h-1 rounded bg-white transition duration-300" class:opacity-0={open}>
+				</span>
+				<span
+					class="block h-1 transform rounded bg-white transition duration-300"
+					class:-rotate-45={open}
+					class:-translate-y-3={open}
+				>
+				</span>
+			</div>
+			{#if open}
+				<div
+					transition:slide={{ duration: 300 }}
+					class="bg-opacity-90 fixed inset-0 z-40 flex flex-col items-center justify-center space-y-6 bg-black text-2xl text-white"
+				>
+					<a href="/" on:click={() => (open = false)}>/</a>
+					<a href="/faq" on:click={() => (open = false)}>FAQ</a>
+					<a href="/sobre" on:click={() => (open = false)}>Sobre</a>
+					<a href="/contato" on:click={() => (open = false)}>Contato</a>
+				</div>
+			{/if}
+			<div class="mr-4 hidden items-center justify-center sm:flex">
 				{#snippet ListItem({ title, content, href, class: className, ...restProps }: ListItemProps)}
 					<li>
 						<NavigationMenu.Link>
@@ -182,6 +167,13 @@
 							</NavigationMenu.Content>
 						</NavigationMenu.Item>
 						<NavigationMenu.Item>
+							<NavigationMenu.Link>
+								{#snippet child()}
+									<a href="/faq" class={navigationMenuTriggerStyle()}>FAQ</a>
+								{/snippet}
+							</NavigationMenu.Link>
+						</NavigationMenu.Item>
+						<!-- <NavigationMenu.Item>
 							<NavigationMenu.Trigger>FAQ</NavigationMenu.Trigger>
 							<NavigationMenu.Content>
 								<ul class="grid w-[400px] gap-2 p-2 md:w-[500px] md:grid-cols-1 lg:w-[400px]">
@@ -194,7 +186,7 @@
 									{/each}
 								</ul>
 							</NavigationMenu.Content>
-						</NavigationMenu.Item>
+						</NavigationMenu.Item> -->
 						<NavigationMenu.Item>
 							<NavigationMenu.Link>
 								{#snippet child()}
@@ -215,3 +207,10 @@
 		</div>
 	</div>
 </navbar>
+
+<style>
+	a:hover {
+		color: #ccc;
+		transition: color 0.2s;
+	}
+</style>
