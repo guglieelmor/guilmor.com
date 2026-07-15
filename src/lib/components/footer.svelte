@@ -1,29 +1,38 @@
-<script>
+<script lang="ts">
+	import { resolve } from '$app/paths';
+
 	const year = new Date().getFullYear();
 </script>
 
 <footer
-	class="relative z-40 flex justify-center border-t border-b border-gray-700 bg-black px-2.5 lg:px-0"
+	class="relative z-40 flex justify-center border-t border-b border-gray-700 bg-background px-2.5 lg:px-0"
 >
-	<div class="container max-w-[1200px] border-r border-l border-gray-700 bg-black">
+	<div class="container max-w-[1200px] border-r border-l border-gray-700 bg-background">
 		<div class="grid p-0 lg:grid-cols-2">
 			<div class="border-b-0 border-gray-700 px-6 py-10 lg:border-b lg:px-8 lg:py-12">
 				<h3 class="mb-4 text-2xl font-bold">Menu</h3>
 				<ul class="space-y-3">
 					<li>
-						<a class="transition-colors hover:text-muted-foreground lg:text-lg" href="/">/</a>
-					</li>
-					<li>
-						<a class="transition-colors hover:text-muted-foreground lg:text-lg" href="/faq">FAQ</a>
-					</li>
-					<li>
-						<a class="transition-colors hover:text-muted-foreground lg:text-lg" href="/sobre"
-							>Sobre</a
+						<a class="transition-colors hover:text-muted-foreground lg:text-lg" href={resolve('/')}
+							>/</a
 						>
 					</li>
 					<li>
-						<a class="transition-colors hover:text-muted-foreground lg:text-lg" href="/contato"
-							>Contato</a
+						<a
+							class="transition-colors hover:text-muted-foreground lg:text-lg"
+							href={resolve('/faq')}>FAQ</a
+						>
+					</li>
+					<li>
+						<a
+							class="transition-colors hover:text-muted-foreground lg:text-lg"
+							href={resolve('/sobre')}>Sobre</a
+						>
+					</li>
+					<li>
+						<a
+							class="transition-colors hover:text-muted-foreground lg:text-lg"
+							href={resolve('/contato')}>Contato</a
 						>
 					</li>
 				</ul>
@@ -31,8 +40,8 @@
 			<div class="border-b border-gray-700 px-6 py-10 lg:border-l lg:px-8 lg:py-12">
 				<div class="flex items-center gap-6 lg:justify-end">
 					<a
-						aria-label="https://www.facebook.com/people/Guilmor/61569401139546/"
-						class="transition-colors hover:text-muted-foreground"
+						aria-label="Facebook"
+						class="text-foreground transition-all duration-200 hover:scale-110 hover:text-muted-foreground"
 						href="https://www.facebook.com/people/Guilmor/61569401139546/"
 					>
 						<svg
@@ -51,8 +60,8 @@
 						</svg>
 					</a>
 					<a
-						aria-label="https://www.linkedin.com/company/guilmorsoftwares"
-						class="transition-colors hover:text-muted-foreground"
+						aria-label="LinkedIn"
+						class="text-foreground transition-all duration-200 hover:scale-110 hover:text-muted-foreground"
 						href="https://www.linkedin.com/company/guilmorsoftwares"
 					>
 						<svg
@@ -82,14 +91,14 @@
 			<div class="flex flex-col justify-center px-6 py-10 lg:max-w-md lg:px-8 lg:py-12">
 				<div class="max-w-md">
 					<p class="text-sm text-foreground">GUILMOR</p>
-					<p class="font-inter-tight text-mid-gray text-xs">
+					<p class="font-inter-tight text-xs text-muted-foreground">
 						Oferecemos soluções tecnológicas sob medida e também atuamos em diferentes setores com
 						produtos prontos que aceleram resultados.
 					</p>
 				</div>
 			</div>
 			<div class="flex justify-start px-6 py-10 lg:justify-end lg:px-8 lg:py-12">
-				<a href="/" class="cursor-pointer">
+				<a href={resolve('/')} class="cursor-pointer">
 					<img
 						alt="Guilmor"
 						loading="lazy"
@@ -97,7 +106,7 @@
 						height="52"
 						decoding="async"
 						data-nimg="1"
-						class="border border-gray-800 invert dark:invert-0"
+						class="border border-gray-800"
 						style="color:transparent"
 						src="/logo/guilmor.svg"
 					/>
@@ -114,14 +123,16 @@
 			<div
 				class="flex flex-col items-start gap-2 pt-7 text-gray-400 sm:flex-row sm:justify-end lg:items-center lg:pt-0"
 			>
-				<a class="text-xs underline hover:text-muted-foreground" href="/politica-de-privacidade"
-					>Política de Privacidade</a
+				<a
+					class="text-xs underline hover:text-muted-foreground"
+					href={resolve('/politica-de-privacidade')}>Política de Privacidade</a
 				>
-				<a class="text-xs underline hover:text-muted-foreground" href="/termo-de-uso"
+				<a class="text-xs underline hover:text-muted-foreground" href={resolve('/termo-de-uso')}
 					>Termos de Uso</a
 				>
-				<a class="text-xs underline hover:text-muted-foreground" href="/termo-de-assinatura"
-					>Termos de Assinatura</a
+				<a
+					class="text-xs underline hover:text-muted-foreground"
+					href={resolve('/termo-de-assinatura')}>Termos de Assinatura</a
 				>
 			</div>
 		</div>

@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import Content from '$lib/components/content.svelte';
+	import { resolve } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -7,7 +8,7 @@
 </svelte:head>
 <Content>
 	<section
-		class="mx-auto flex max-w-[1200px] flex-col items-start justify-start overflow-x-auto rounded-none bg-black p-0 px-2.5 lg:basis-1/4 lg:flex-row lg:px-0"
+		class="mx-auto flex max-w-[1200px] flex-col items-start justify-start overflow-x-auto rounded-none bg-background p-0 px-2.5 lg:basis-1/4 lg:flex-row lg:px-0"
 	>
 		<div
 			class="h-full min-h-56 w-full items-start justify-start rounded-none border-t border-r border-l border-gray-700 text-start whitespace-normal text-foreground"
@@ -74,7 +75,7 @@
 				<h2 class="text-2xl font-semibold text-foreground">6. Privacidade e Proteção de Dados</h2>
 				<p>
 					O tratamento de dados pessoais segue as diretrizes estabelecidas na
-					<a href="/politica-de-privacidade" class="text-primary underline"
+					<a href={resolve('/politica-de-privacidade')} class="text-primary underline"
 						>Política de Privacidade</a
 					>.
 				</p>

@@ -1,10 +1,9 @@
-<script>
-	export let title = '';
-	export let description = '';
+<script lang="ts">
+	let { title = '', description = '', children }: { title?: string; description?: string; children?: import('svelte').Snippet } = $props();
 </script>
 
 <section
-	class="mx-auto flex max-w-[1200px] flex-col items-start justify-start overflow-x-auto rounded-none bg-black p-0 px-2.5 lg:basis-1/4 lg:flex-row lg:px-0"
+	class="mx-auto flex max-w-[1200px] flex-col items-start justify-start overflow-x-auto rounded-none bg-background p-0 px-2.5 lg:basis-1/4 lg:flex-row lg:px-0"
 >
 	<div
 		class="h-full min-h-56 w-full items-start justify-start rounded-none border-t border-r border-l border-gray-700 text-start whitespace-normal text-foreground"
@@ -18,7 +17,7 @@
 			</div>
 		</div>
 		<div>
-			<slot />
+			{@render children?.()}
 		</div>
 	</div>
 </section>
