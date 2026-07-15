@@ -1,29 +1,28 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
-	import { writable } from 'svelte/store';
 
-	const cookiesVisible = writable(false);
+	let cookiesVisible = $state(false);
 
 	onMount(() => {
 		const accepted = localStorage.getItem('cookiesAccepted') === 'true';
 		if (!accepted) {
-			setTimeout(() => cookiesVisible.set(true), 1500);
+			setTimeout(() => (cookiesVisible = true), 1500);
 		}
 	});
 
 	const acceptCookies = () => {
 		localStorage.setItem('cookiesAccepted', 'true');
-		cookiesVisible.set(false);
+		cookiesVisible = false;
 	};
 
 	const declineCookies = () => {
 		localStorage.setItem('cookiesAccepted', 'false');
-		cookiesVisible.set(false);
-		setTimeout(() => cookiesVisible.set(true), 1000);
+		cookiesVisible = false;
+		setTimeout(() => (cookiesVisible = true), 1000);
 	};
 </script>
 
-{#if $cookiesVisible}
+{#if cookiesVisible}
 	<div
 		class="fixed bottom-20 z-40 w-full max-w-[450px] overflow-hidden rounded-lg bg-gray-900 shadow-2xl sm:left-4 sm:w-1/2 xl:w-1/4"
 	>
@@ -57,13 +56,13 @@
 		<div class="flex w-full items-center justify-center border-t border-solid border-gray-200">
 			<button
 				class="flex-1 cursor-pointer border-r border-gray-200 px-4 py-3 text-white duration-150 hover:bg-gray-600 hover:text-white"
-				on:click={declineCookies}
+				onclick={declineCookies}
 			>
 				Não, obrigado!
 			</button>
 			<button
 				class="flex-1 cursor-pointer px-4 py-3 text-white duration-150 hover:bg-gray-600 hover:text-white"
-				on:click={acceptCookies}
+				onclick={acceptCookies}
 			>
 				Ok, aceito!
 			</button>
@@ -73,7 +72,8 @@
 
 <button
 	class="fixed bottom-5 left-4 z-40 cursor-pointer rounded-full bg-gray-700 px-2 py-2 text-sm text-white uppercase"
-	on:click={() => cookiesVisible.update((v) => !v)}
+	onclick={() => (cookiesVisible = !cookiesVisible)}
+	aria-label="Preferências de cookies"
 >
 	<svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<circle cx="32" cy="32" r="30" fill="#000000" />

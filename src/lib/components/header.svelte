@@ -33,7 +33,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="g-gradient h-1">&nbsp;</div>
+	<div class="gradient-blob h-1">&nbsp;</div>
 	<div
 		class="bg-obsidian flex flex-col items-start justify-start overflow-x-auto rounded-none border-t border-b-0 border-gray-700 p-0 lg:basis-1/4 lg:flex-row lg:border-b"
 	>
@@ -157,53 +157,21 @@
 	>
 		<div class="items-startp-4 relative mx-auto flex h-[20rem] max-w-sm flex-col pb-20">
 			<EvervaultCard text="Site" />
-			<h2 class="mt-4 px-5 text-sm font-light text-black dark:text-white">
+			<h2 class="mt-4 px-5 text-sm font-light text-white">
 				Contrução de sites institucionais, landing pages e e-commerces.
 			</h2>
 		</div>
 		<div class="items-startp-4 relative mx-auto flex h-[20rem] max-w-sm flex-col pb-20">
 			<EvervaultCard text="SaaS" />
-			<h2 class="mt-4 px-5 text-sm font-light text-black dark:text-white">
+			<h2 class="mt-4 px-5 text-sm font-light text-white">
 				Desenvolvimento de plataformas personalizadas para atender às necessidades do seu negócio.
 			</h2>
 		</div>
 		<div class="items-startp-4 relative mx-auto flex h-[20rem] max-w-sm flex-col pb-20">
 			<EvervaultCard text="Cloud" />
-			<h2 class="mt-4 px-5 text-sm font-light text-black dark:text-white">
+			<h2 class="mt-4 px-5 text-sm font-light text-white">
 				Soluções em nuvem para escalabilidade, segurança e eficiência operacional.
 			</h2>
 		</div>
 	</div>
 </header>
-
-<style>
-	.g-gradient {
-		background: linear-gradient(
-			228deg,
-			#fdfdfd,
-			#ff5454,
-			#54ff79,
-			#5485ff,
-			#ba54ff,
-			#ff54bc,
-			#ecff54,
-			#dfdfdf,
-			#0c96b6,
-			#0cb647,
-			#970cb6
-		);
-		background-size: 1000% 2200%;
-		animation: animBackground 40s ease infinite;
-	}
-	@keyframes animBackground {
-		0% {
-			background-position: 0% 54%;
-		}
-		50% {
-			background-position: 100% 47%;
-		}
-		100% {
-			background-position: 0% 54%;
-		}
-	}
-</style>

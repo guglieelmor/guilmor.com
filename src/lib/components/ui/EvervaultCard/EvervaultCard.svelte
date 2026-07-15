@@ -3,26 +3,23 @@
 	import { cn } from '$lib/utils';
 	import { onMount } from 'svelte';
 
-	export let text: string | undefined = undefined;
-	export let className: string | undefined = undefined;
+	let { text, className }: { text?: string; className?: string } = $props();
 
 	let mouseX = useMotionValue(0);
 	let mouseY = useMotionValue(0);
 
-	let randomString = '';
+	let randomString = $state('');
 
 	onMount(() => {
-		let str = generateRandomString(1500);
-		randomString = str;
+		randomString = generateRandomString(1500);
 	});
 
-	function onMouseMove({ currentTarget, clientX, clientY }: any) {
+	function onMouseMove({ currentTarget, clientX, clientY }: MouseEvent & { currentTarget: HTMLElement }) {
 		let { left, top } = currentTarget.getBoundingClientRect();
 		mouseX.set(clientX - left);
 		mouseY.set(clientY - top);
 
-		const str = generateRandomString(1500);
-		randomString = str;
+		randomString = generateRandomString(1500);
 	}
 
 	const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -40,12 +37,13 @@
 
 <div
 	class={cn(
-		'aspect-square rounded-3xl relative flex bg-black h-full w-full items-center justify-center p-0.5',
+		'aspect-square rounded-3xl relative flex bg-background h-full w-full items-center justify-center p-0.5',
 		className
 	)}
 >
 	<div
-		on:mousemove={onMouseMove}
+		onmousemove={onMouseMove}
+		role="presentation"
 		class="group/card relative flex h-full w-full items-center justify-center overflow-hidden rounded-1xl bg-transparent"
 	>
 		<div class="pointer-events-none">
@@ -55,8 +53,8 @@
 			<Motion let:motion {style}>
 				<div
 					use:motion
-					class="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-500 to-blue-700 opacity-0 backdrop-blur-xl transition duration-500 group-hover/card:opacity-100"
-				/>
+					class="absolute inset-0 rounded-2xl bg-linear-to-r from-green-500 to-blue-700 opacity-0 backdrop-blur-xl transition duration-500 group-hover/card:opacity-100"
+				></div>
 			</Motion>
 			<Motion let:motion {style}>
 				<div
@@ -75,11 +73,9 @@
 			<div
 				class="relative flex h-44 w-44 items-center justify-center rounded-full text-4xl font-bold text-white"
 			>
-				<div
-					class="absolute h-full w-full rounded-full bg-white/[0.8] blur-sm dark:bg-black/[0.8]"
-				/>
+				<div class="absolute h-full w-full rounded-full bg-black/[0.8] blur-sm"></div>
 				{#if text}
-					<span class="z-20 text-black dark:text-white">{text}</span>
+					<span class="z-20 text-white">{text}</span>
 				{/if}
 			</div>
 		</div>

@@ -1,5 +1,5 @@
-<script>
-	let faqs = [
+<script lang="ts">
+	let faqs = $state([
 		{
 			question: 'O que fazemos?',
 			answer:
@@ -30,24 +30,24 @@
 				'Sim, acompanhamos e damos suporte contínuo, garantindo que tudo funcione perfeitamente mesmo depois de lançado.',
 			open: false
 		}
-	];
+	]);
 
-	function toggle(index) {
+	function toggle(index: number) {
 		faqs[index].open = !faqs[index].open;
 	}
 </script>
 
 <div class="text-foreground">
-	{#each faqs as faq, i}
+	{#each faqs as faq, i (faq.question)}
 		<div
 			class="border-b border-gray-700 p-6 transition-colors duration-200"
-			class:bg-jet={faq.open}
+			class:bg-muted={faq.open}
 		>
 			<h3 class="flex">
 				<button
 					type="button"
 					class="flex flex-1 items-center justify-between py-4 text-left text-xl font-medium transition-all hover:underline"
-					on:click={() => toggle(i)}
+					onclick={() => toggle(i)}
 					aria-expanded={faq.open}
 				>
 					{faq.question}

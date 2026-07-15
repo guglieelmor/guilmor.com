@@ -2,59 +2,30 @@
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index.js';
 	import { cn } from '$lib/utils.js';
 	import { navigationMenuTriggerStyle } from '$lib/components/ui/navigation-menu/navigation-menu-trigger.svelte';
+	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import type { HTMLAttributes } from 'svelte/elements';
 	import { slide } from 'svelte/transition';
-	let open = false;
+
+	let open = $state(false);
 	const toggleMenu = () => (open = !open);
+	const closeMenu = () => (open = false);
 
 	type ListItemProps = HTMLAttributes<HTMLAnchorElement> & {
 		title: string;
 		href: string;
 		content: string;
 	};
-
-	let faqs = [
-		{
-			question: 'O que fazemos?',
-			answer:
-				'Oferecemos soluções digitais completas, combinando design, tecnologia e estratégia para criar produtos que realmente impactam.',
-			open: false
-		},
-		{
-			question: 'Quais serviços estão disponíveis?',
-			answer:
-				'Desenvolvemos sites, apps, automações e interfaces digitais, além de prestar consultoria para otimizar processos e resultados.',
-			open: false
-		},
-		{
-			question: 'Como posso falar com a equipe?',
-			answer:
-				'Você pode entrar em contato diretamente pelo formulário do site, e-mail ou WhatsApp. Estamos sempre prontos para atender.',
-			open: false
-		},
-		{
-			question: 'Atendem qualquer tipo de empresa?',
-			answer:
-				'Sim, trabalhamos com startups, pequenas empresas ou grandes marcas, oferecendo soluções sob medida para cada necessidade.',
-			open: false
-		},
-		{
-			question: 'Há suporte após a entrega do projeto?',
-			answer:
-				'Sim, acompanhamos e damos suporte contínuo, garantindo que tudo funcione perfeitamente mesmo depois de lançado.',
-			open: false
-		}
-	];
 </script>
 
-<navbar
-	class="relative z-40 flex h-20 justify-center border-b border-gray-300 bg-black px-2.5 lg:px-0 dark:border-gray-700"
+<nav
+	class="relative z-40 flex h-20 justify-center border-b border-gray-700 bg-background px-2.5 lg:px-0"
 >
 	<div
-		class="container flex h-20 max-w-[1200px] items-center border-r border-b border-l border-gray-700 bg-black"
+		class="container flex h-20 max-w-[1200px] items-center border-r border-b border-l border-gray-700 bg-background"
 	>
 		<div class="flex w-full items-center justify-between">
-			<a class="flex items-center gap-2" href="/">
+			<a class="flex items-center gap-2" href={resolve('/')}>
 				<img
 					class="border-r border-gray-700"
 					alt="Guilmor"
@@ -67,9 +38,12 @@
 					src="/logo/guilmor.svg"
 				/>
 			</a>
-			<div
+			<button
+				type="button"
 				class="fixed top-7 right-4 z-50 flex h-6 w-6 cursor-pointer flex-col justify-between sm:hidden"
-				on:click={toggleMenu}
+				onclick={toggleMenu}
+				aria-label={open ? 'Fechar menu' : 'Abrir menu'}
+				aria-expanded={open}
 			>
 				<span
 					class="block h-1 transform rounded bg-white transition duration-300"
@@ -85,16 +59,16 @@
 					class:-translate-y-3={open}
 				>
 				</span>
-			</div>
+			</button>
 			{#if open}
 				<div
 					transition:slide={{ duration: 300 }}
-					class="bg-opacity-90 fixed inset-0 z-40 flex flex-col items-center justify-center space-y-6 bg-black text-2xl text-white"
+					class="bg-opacity-90 fixed inset-0 z-40 flex flex-col items-center justify-center space-y-6 bg-background text-2xl text-white"
 				>
-					<a href="/" on:click={() => (open = false)}>/</a>
-					<a href="/faq" on:click={() => (open = false)}>FAQ</a>
-					<a href="/sobre" on:click={() => (open = false)}>Sobre</a>
-					<a href="/contato" on:click={() => (open = false)}>Contato</a>
+					<a href={resolve('/')} aria-current={page.url.pathname === '/' ? 'page' : undefined} onclick={closeMenu}>/</a>
+					<a href={resolve('/faq')} aria-current={page.url.pathname === '/faq' ? 'page' : undefined} onclick={closeMenu}>FAQ</a>
+					<a href={resolve('/sobre')} aria-current={page.url.pathname === '/sobre' ? 'page' : undefined} onclick={closeMenu}>Sobre</a>
+					<a href={resolve('/contato')} aria-current={page.url.pathname === '/contato' ? 'page' : undefined} onclick={closeMenu}>Contato</a>
 				</div>
 			{/if}
 			<div class="mr-4 hidden items-center justify-center sm:flex">
@@ -102,6 +76,8 @@
 					<li>
 						<NavigationMenu.Link>
 							{#snippet child()}
+								<!-- href já vem resolvido pelo chamador via resolve() -->
+								<!-- eslint-disable svelte/no-navigation-without-resolve -->
 								<a
 									{href}
 									class={cn(
@@ -115,6 +91,7 @@
 										{content}
 									</p>
 								</a>
+								<!-- eslint-enable svelte/no-navigation-without-resolve -->
 							{/snippet}
 						</NavigationMenu.Link>
 					</li>
@@ -125,7 +102,7 @@
 						<NavigationMenu.Item>
 							<NavigationMenu.Link>
 								{#snippet child()}
-									<a href="/" class={navigationMenuTriggerStyle()}>/</a>
+									<a href={resolve('/')} class={navigationMenuTriggerStyle()}>/</a>
 								{/snippet}
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>
@@ -138,7 +115,7 @@
 											class="flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b from-muted/50 to-muted p-6 no-underline outline-hidden select-none focus:shadow-md"
 										>
 											{#snippet child({ props })}
-												<a {...props} href="/">
+												<a {...props} href={resolve('/')}>
 													<div class="mt-4 mb-2 text-lg font-medium">GUILMOR</div>
 													<p class="text-sm leading-tight text-muted-foreground">
 														Tecnologia, Desenvolvimento e Inovação
@@ -148,18 +125,18 @@
 										</NavigationMenu.Link>
 									</li>
 									{@render ListItem({
-										href: '/',
+										href: resolve('/'),
 										title: 'Consultoria Personalizada',
 										content:
 											'Entendemos seu negócio e oferecemos soluções sob medida para cada desafio.'
 									})}
 									{@render ListItem({
-										href: '/',
+										href: resolve('/'),
 										title: 'Desenvolvimento de Projetos',
 										content: 'Transformamos ideias em produtos digitais funcionais e escaláveis.'
 									})}
 									{@render ListItem({
-										href: '/',
+										href: resolve('/'),
 										title: 'Suporte e Manutenção',
 										content: 'Acompanhamos seu projeto de perto para garantir desempenho contínuo.'
 									})}
@@ -169,35 +146,21 @@
 						<NavigationMenu.Item>
 							<NavigationMenu.Link>
 								{#snippet child()}
-									<a href="/faq" class={navigationMenuTriggerStyle()}>FAQ</a>
-								{/snippet}
-							</NavigationMenu.Link>
-						</NavigationMenu.Item>
-						<!-- <NavigationMenu.Item>
-							<NavigationMenu.Trigger>FAQ</NavigationMenu.Trigger>
-							<NavigationMenu.Content>
-								<ul class="grid w-[400px] gap-2 p-2 md:w-[500px] md:grid-cols-1 lg:w-[400px]">
-									{#each faqs as component, i (i)}
-										{@render ListItem({
-											href: '/faq',
-											title: component.question,
-											content: component.answer
-										})}
-									{/each}
-								</ul>
-							</NavigationMenu.Content>
-						</NavigationMenu.Item> -->
-						<NavigationMenu.Item>
-							<NavigationMenu.Link>
-								{#snippet child()}
-									<a href="/sobre" class={navigationMenuTriggerStyle()}>Sobre</a>
+									<a href={resolve('/faq')} class={navigationMenuTriggerStyle()}>FAQ</a>
 								{/snippet}
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>
 						<NavigationMenu.Item>
 							<NavigationMenu.Link>
 								{#snippet child()}
-									<a href="/contato" class={navigationMenuTriggerStyle()}>Contato</a>
+									<a href={resolve('/sobre')} class={navigationMenuTriggerStyle()}>Sobre</a>
+								{/snippet}
+							</NavigationMenu.Link>
+						</NavigationMenu.Item>
+						<NavigationMenu.Item>
+							<NavigationMenu.Link>
+								{#snippet child()}
+									<a href={resolve('/contato')} class={navigationMenuTriggerStyle()}>Contato</a>
 								{/snippet}
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>
@@ -206,7 +169,7 @@
 			</div>
 		</div>
 	</div>
-</navbar>
+</nav>
 
 <style>
 	a:hover {
