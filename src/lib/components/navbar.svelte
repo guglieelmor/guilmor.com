@@ -63,7 +63,7 @@
 			{#if open}
 				<div
 					transition:slide={{ duration: 300 }}
-					class="bg-opacity-90 fixed inset-0 z-40 flex flex-col items-center justify-center space-y-6 bg-background text-2xl text-white"
+					class="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-6 bg-background/95 text-2xl text-white backdrop-blur-sm"
 				>
 					<a href={resolve('/')} aria-current={page.url.pathname === '/' ? 'page' : undefined} onclick={closeMenu}>/</a>
 					<a href={resolve('/faq')} aria-current={page.url.pathname === '/faq' ? 'page' : undefined} onclick={closeMenu}>FAQ</a>
@@ -102,7 +102,12 @@
 						<NavigationMenu.Item>
 							<NavigationMenu.Link>
 								{#snippet child()}
-									<a href={resolve('/')} class={navigationMenuTriggerStyle()}>/</a>
+									<a
+										href={resolve('/')}
+										aria-current={page.url.pathname === '/' ? 'page' : undefined}
+										class={cn(navigationMenuTriggerStyle(), 'aria-[current=page]:text-foreground aria-[current=page]:font-semibold')}
+										>/</a
+									>
 								{/snippet}
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>
@@ -146,21 +151,36 @@
 						<NavigationMenu.Item>
 							<NavigationMenu.Link>
 								{#snippet child()}
-									<a href={resolve('/faq')} class={navigationMenuTriggerStyle()}>FAQ</a>
+									<a
+										href={resolve('/faq')}
+										aria-current={page.url.pathname === '/faq' ? 'page' : undefined}
+										class={cn(navigationMenuTriggerStyle(), 'aria-[current=page]:text-foreground aria-[current=page]:font-semibold')}
+										>FAQ</a
+									>
 								{/snippet}
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>
 						<NavigationMenu.Item>
 							<NavigationMenu.Link>
 								{#snippet child()}
-									<a href={resolve('/sobre')} class={navigationMenuTriggerStyle()}>Sobre</a>
+									<a
+										href={resolve('/sobre')}
+										aria-current={page.url.pathname === '/sobre' ? 'page' : undefined}
+										class={cn(navigationMenuTriggerStyle(), 'aria-[current=page]:text-foreground aria-[current=page]:font-semibold')}
+										>Sobre</a
+									>
 								{/snippet}
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>
 						<NavigationMenu.Item>
 							<NavigationMenu.Link>
 								{#snippet child()}
-									<a href={resolve('/contato')} class={navigationMenuTriggerStyle()}>Contato</a>
+									<a
+										href={resolve('/contato')}
+										aria-current={page.url.pathname === '/contato' ? 'page' : undefined}
+										class={cn(navigationMenuTriggerStyle(), 'aria-[current=page]:text-foreground aria-[current=page]:font-semibold')}
+										>Contato</a
+									>
 								{/snippet}
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>

@@ -3,7 +3,7 @@
 </script>
 
 <header
-	class="container mx-auto flex max-w-[1200px] flex-col justify-center border-r-0 border-l-0 border-gray-700 bg-black px-2.5 lg:border-r lg:border-l lg:px-0"
+	class="container mx-auto flex max-w-[1200px] flex-col justify-center border-r-0 border-l-0 border-gray-700 bg-background px-2.5 lg:border-r lg:border-l lg:px-0"
 >
 	<div class="relative border-r border-l border-gray-700 lg:border-r-0 lg:border-l-0">
 		<div
@@ -26,7 +26,7 @@
 				>
 					Design & Tecnologia
 				</h1>
-				<p class="font-inter-tight text-mid-gray z-10 text-sm md:text-lg lg:text-xl">
+				<p class="font-inter-tight z-10 text-sm text-muted-foreground md:text-lg lg:text-xl">
 					Estratégia, consultoria e desenvolvimento para transformar ideias em soluções digitais que
 					crescem com o seu negócio.
 				</p>
@@ -35,10 +35,10 @@
 	</div>
 	<div class="gradient-blob h-1">&nbsp;</div>
 	<div
-		class="bg-obsidian flex flex-col items-start justify-start overflow-x-auto rounded-none border-t border-b-0 border-gray-700 p-0 lg:basis-1/4 lg:flex-row lg:border-b"
+		class="flex flex-col items-start justify-start overflow-x-auto rounded-none border-t border-b-0 border-gray-700 bg-background p-0 lg:basis-1/4 lg:flex-row lg:border-b"
 	>
 		<div
-			class="h-full min-h-56 w-full items-start justify-start rounded-none border-r border-b border-l border-gray-700 px-6 py-12 text-start whitespace-normal text-foreground lg:border-b-0 lg:border-l-0 lg:p-8"
+			class="group h-full min-h-56 w-full items-start justify-start rounded-none border-r border-b border-l border-gray-700 px-6 py-12 text-start whitespace-normal text-foreground transition-colors duration-300 hover:bg-accent/40 lg:border-b-0 lg:border-l-0 lg:p-8"
 		>
 			<div class="flex h-full w-full justify-between gap-2">
 				<div>
@@ -58,7 +58,7 @@
 					stroke-width="2"
 					stroke-linecap="round"
 					stroke-linejoin="round"
-					class="lucide lucide-layout size-4 shrink-0"
+					class="lucide lucide-layout size-4 shrink-0 text-muted-foreground transition-colors duration-300 group-hover:text-foreground"
 				>
 					<rect x="3" y="3" width="18" height="18" rx="2"></rect>
 					<path d="M3 9h18M9 21V9"></path>
@@ -66,7 +66,7 @@
 			</div>
 		</div>
 		<div
-			class="h-full min-h-56 w-full items-start justify-start rounded-none border-r border-b border-l border-gray-700 px-6 py-12 text-start whitespace-normal text-foreground lg:border-b-0 lg:border-l-0 lg:p-8"
+			class="group h-full min-h-56 w-full items-start justify-start rounded-none border-r border-b border-l border-gray-700 px-6 py-12 text-start whitespace-normal text-foreground transition-colors duration-300 hover:bg-accent/40 lg:border-b-0 lg:border-l-0 lg:p-8"
 		>
 			<div class="flex h-full w-full justify-between gap-2">
 				<div>
@@ -86,7 +86,7 @@
 					stroke-width="2"
 					stroke-linecap="round"
 					stroke-linejoin="round"
-					class="lucide lucide-smartphone size-4 shrink-0"
+					class="lucide lucide-smartphone size-4 shrink-0 text-muted-foreground transition-colors duration-300 group-hover:text-foreground"
 				>
 					<rect x="5" y="2" width="14" height="20" rx="2"></rect>
 					<path d="M12 18h.01"></path>
@@ -94,7 +94,7 @@
 			</div>
 		</div>
 		<div
-			class="lg:border-r-dark-gray h-full min-h-56 w-full items-start justify-start rounded-none border-r border-b border-l border-gray-700 px-6 py-12 text-start whitespace-normal text-foreground lg:border-b-0 lg:border-l-0 lg:p-8"
+			class="group h-full min-h-56 w-full items-start justify-start rounded-none border-r border-b border-l border-gray-700 px-6 py-12 text-start whitespace-normal text-foreground transition-colors duration-300 hover:bg-accent/40 lg:border-b-0 lg:border-l-0 lg:p-8"
 		>
 			<div class="flex h-full w-full justify-between gap-2">
 				<div>
@@ -114,7 +114,7 @@
 					stroke-width="2"
 					stroke-linecap="round"
 					stroke-linejoin="round"
-					class="lucide lucide-settings size-4 shrink-0"
+					class="lucide lucide-settings size-4 shrink-0 text-muted-foreground transition-colors duration-300 group-hover:text-foreground"
 				>
 					<circle cx="12" cy="12" r="3"></circle>
 					<path
@@ -125,7 +125,7 @@
 			</div>
 		</div>
 		<div
-			class="h-full min-h-56 w-full items-start justify-start rounded-none border-r border-b border-l border-gray-700 px-6 py-12 text-start whitespace-normal text-foreground lg:border-b-0 lg:border-l-0 lg:p-8"
+			class="group h-full min-h-56 w-full items-start justify-start rounded-none border-r border-b border-l border-gray-700 px-6 py-12 text-start whitespace-normal text-foreground transition-colors duration-300 hover:bg-accent/40 lg:border-b-0 lg:border-l-0 lg:p-8"
 		>
 			<div class="flex h-full w-full justify-between gap-2">
 				<div>
@@ -145,7 +145,7 @@
 					stroke-width="2"
 					stroke-linecap="round"
 					stroke-linejoin="round"
-					class="lucide lucide-activity size-4 shrink-0"
+					class="lucide lucide-activity size-4 shrink-0 text-muted-foreground transition-colors duration-300 group-hover:text-foreground"
 				>
 					<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
 				</svg>
@@ -153,21 +153,21 @@
 		</div>
 	</div>
 	<div
-		class="flex flex-col gap-1 border-r border-l border-gray-700 bg-black p-3 lg:flex-row lg:border-r-0 lg:border-l-0"
+		class="flex flex-col gap-1 border-r border-l border-gray-700 bg-background p-3 lg:flex-row lg:border-r-0 lg:border-l-0"
 	>
-		<div class="items-startp-4 relative mx-auto flex h-[20rem] max-w-sm flex-col pb-20">
+		<div class="relative mx-auto flex h-[20rem] max-w-sm flex-col items-start p-4 pb-20">
 			<EvervaultCard text="Site" />
 			<h2 class="mt-4 px-5 text-sm font-light text-white">
 				Contrução de sites institucionais, landing pages e e-commerces.
 			</h2>
 		</div>
-		<div class="items-startp-4 relative mx-auto flex h-[20rem] max-w-sm flex-col pb-20">
+		<div class="relative mx-auto flex h-[20rem] max-w-sm flex-col items-start p-4 pb-20">
 			<EvervaultCard text="SaaS" />
 			<h2 class="mt-4 px-5 text-sm font-light text-white">
 				Desenvolvimento de plataformas personalizadas para atender às necessidades do seu negócio.
 			</h2>
 		</div>
-		<div class="items-startp-4 relative mx-auto flex h-[20rem] max-w-sm flex-col pb-20">
+		<div class="relative mx-auto flex h-[20rem] max-w-sm flex-col items-start p-4 pb-20">
 			<EvervaultCard text="Cloud" />
 			<h2 class="mt-4 px-5 text-sm font-light text-white">
 				Soluções em nuvem para escalabilidade, segurança e eficiência operacional.

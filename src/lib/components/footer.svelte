@@ -40,8 +40,8 @@
 			<div class="border-b border-gray-700 px-6 py-10 lg:border-l lg:px-8 lg:py-12">
 				<div class="flex items-center gap-6 lg:justify-end">
 					<a
-						aria-label="https://www.facebook.com/people/Guilmor/61569401139546/"
-						class="transition-colors hover:text-muted-foreground"
+						aria-label="Facebook"
+						class="text-foreground transition-all duration-200 hover:scale-110 hover:text-muted-foreground"
 						href="https://www.facebook.com/people/Guilmor/61569401139546/"
 					>
 						<svg
@@ -60,8 +60,8 @@
 						</svg>
 					</a>
 					<a
-						aria-label="https://www.linkedin.com/company/guilmorsoftwares"
-						class="transition-colors hover:text-muted-foreground"
+						aria-label="LinkedIn"
+						class="text-foreground transition-all duration-200 hover:scale-110 hover:text-muted-foreground"
 						href="https://www.linkedin.com/company/guilmorsoftwares"
 					>
 						<svg
@@ -91,7 +91,7 @@
 			<div class="flex flex-col justify-center px-6 py-10 lg:max-w-md lg:px-8 lg:py-12">
 				<div class="max-w-md">
 					<p class="text-sm text-foreground">GUILMOR</p>
-					<p class="font-inter-tight text-mid-gray text-xs">
+					<p class="font-inter-tight text-xs text-muted-foreground">
 						Oferecemos soluções tecnológicas sob medida e também atuamos em diferentes setores com
 						produtos prontos que aceleram resultados.
 					</p>
